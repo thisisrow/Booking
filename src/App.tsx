@@ -7,6 +7,7 @@ import SplashScreen from './components/SplashScreen';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Resorts from './pages/Resorts';
+import WaterPark from './pages/WaterPark';
 import Villas from './pages/Villas';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -24,6 +25,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/resorts" element={<Resorts />} />
+              <Route path="/water-park" element={<WaterPark />} />
               <Route path="/villas" element={<Villas />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
