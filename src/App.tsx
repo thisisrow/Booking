@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
@@ -13,6 +14,10 @@ import Contact from './pages/Contact';
 import BookingDetails from './pages/BookingDetails';
 import Tourism from './pages/Tourism';
 import TourismDetails from './pages/TourismDetails';
+// import Collaboration from './pages/Collaboration';
+import Properties from './pages/Properties';
+import PropertyDetails from './pages/PropertyDetails';
+
 function App() {
   return (
     <ThemeProvider>
@@ -32,6 +37,9 @@ function App() {
               <Route path="/booking/:id" element={<BookingDetails />} />
               <Route path="/tourism" element={<Tourism />} />
               <Route path="/tourism/:id" element={<TourismDetails />} />
+              {/* <Route path="/collaboration" element={<Collaboration />} /> */}
+              <Route path="/properties" element={<Properties />} />
+              <Route path="/property/:id" element={<PropertyDetails />} />
             </Routes>
           </main>
           <Footer />

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Building2, Castle, Info, Phone, Menu,Waves,Compass } from 'lucide-react';
+import { Home, Building2, Castle, Info, Phone, Menu, Waves, Compass, Users, Home as HomeIcon } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,9 @@ export default function Navbar() {
     { path: '/resorts', label: 'Resorts', icon: <Building2 className="w-5 h-5" /> },
     { path: '/villas', label: 'Villas', icon: <Castle className="w-5 h-5" /> },
     { path: '/water-park', label: 'Water Park', icon: <Waves className="w-5 h-5" /> },
-    {path:'/tourism', label :'Tourism', icon: <Compass className="w-5 h-5" />},
+    { path: '/tourism', label: 'Tourism', icon: <Compass className="w-5 h-5" /> },
+    { path: '/properties', label: 'Properties', icon: <HomeIcon className="w-5 h-5" /> },
+    { path: '/collaboration', label: 'Collaborate', icon: <Users className="w-5 h-5" /> },
     { path: '/about', label: 'About Us', icon: <Info className="w-5 h-5" /> },
     { path: '/contact', label: 'Contact', icon: <Phone className="w-5 h-5" /> },
   ];
