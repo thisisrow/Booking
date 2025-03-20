@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Building2, Castle, Info, Phone, Menu, Waves, Compass, Users, Home as HomeIcon, MoreHorizontal } from 'lucide-react';
+import { Home, Building2, Castle, Info, Phone, Menu, Waves, Compass, Users, Home as HomeIcon, MoreHorizontal, ShoppingBag } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,6 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Close more menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (showMore && !(event.target as Element).closest('.more-menu')) {
@@ -25,7 +24,6 @@ export default function Navbar() {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [showMore]);
 
-  // Close more menu when route changes
   useEffect(() => {
     setShowMore(false);
   }, [location]);
@@ -33,6 +31,7 @@ export default function Navbar() {
   const navItems = [
     { path: '/', label: 'Home', icon: <Home className="w-5 h-5" /> },
     { path: '/resorts', label: 'Resorts', icon: <Building2 className="w-5 h-5" /> },
+    { path: '/products', label: 'Products', icon: <ShoppingBag className="w-5 h-5" /> },
     { path: '/villas', label: 'Villas', icon: <Castle className="w-5 h-5" /> },
     { path: '/water-park', label: 'Water Park', icon: <Waves className="w-5 h-5" /> },
     { path: '/tourism', label: 'Tourism', icon: <Compass className="w-5 h-5" /> },

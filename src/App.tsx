@@ -17,6 +17,7 @@ import TourismDetails from './pages/TourismDetails';
 import Collaboration from './pages/Collaboration';
 import Properties from './pages/Properties';
 import PropertyDetails from './pages/PropertyDetails';
+import Products from './pages/Products';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Route path="/collaboration" element={<Collaboration />} />
               <Route path="/properties" element={<Properties />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
+              <Route path="/products" element={<Products />} />
             </Routes>
           </main>
           <Footer />
