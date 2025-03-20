@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
@@ -12,7 +11,8 @@ import Villas from './pages/Villas';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import BookingDetails from './pages/BookingDetails';
-
+import Tourism from './pages/Tourism';
+import TourismDetails from './pages/TourismDetails';
 function App() {
   return (
     <ThemeProvider>
@@ -30,6 +30,8 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/booking/:id" element={<BookingDetails />} />
+              <Route path="/tourism" element={<Tourism />} />
+              <Route path="/tourism/:id" element={<TourismDetails />} />
             </Routes>
           </main>
           <Footer />
