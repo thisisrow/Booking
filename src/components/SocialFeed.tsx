@@ -202,50 +202,56 @@ export default function SocialFeed() {
           </div>
         </div>
       </div>
-      <div className="mt-16">
-          <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
-            Latest YouTube Video
-          </h2>
-         <div className=' grid grid-cols-2 md:grid-cols-2 gap-2'>
-         <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-[200px] rounded-xl"
-            ></iframe>
-          </div>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-[200px] rounded-xl"
-            ></iframe>
-          </div>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-[200px] rounded-xl"
-            ></iframe>
-          </div>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-[200px] rounded-xl"
-            ></iframe>
-          </div>
+        
+        {/* YouTube Videos */}
+      <div className="mt-16 mx-2 overflow-hidden ">
+  <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+    Latest YouTube Videos
+  </h2>
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-full mx-auto">
+    {/* Video 1 */}
+    <div className="aspect-w-16 aspect-h-9">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full rounded-xl"
+      ></iframe>
+    </div>
+    {/* Video 2 */}
+    <div className="aspect-w-16 aspect-h-9">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full rounded-xl"
+      ></iframe>
+    </div>
+    {/* Video 3 */}
+    <div className="aspect-w-16 aspect-h-9">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full rounded-xl"
+      ></iframe>
+    </div>
+    {/* Video 4 */}
+    <div className="aspect-w-16 aspect-h-9">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full rounded-xl"
+      ></iframe>
+    </div>
+  </div>
+</div>
 
-         </div>
-          </div>
     </section>
   );
 }
