@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { MapPin, Globe, Clock, Sun, Cloud, Navigation } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';

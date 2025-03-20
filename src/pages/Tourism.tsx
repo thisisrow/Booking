@@ -1,3 +1,4 @@
+import React from 'react';
 import { MapPin, Navigation } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -52,9 +53,9 @@ export default function Tourism() {
       <h1 className="text-3xl font-bold mb-8">Popular Tourist Destinations</h1>
       <div className="grid md:grid-cols-3 gap-8">
         {tourismSpots.map((spot) => (
-          <Link
-            to={`/tourism/${spot.id}`}
-            key={spot.id}
+          <Link 
+            to={`/tourism/${spot.id}`} 
+            key={spot.id} 
             className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
           >
             <div className="relative">
