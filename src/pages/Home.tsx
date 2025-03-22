@@ -32,6 +32,84 @@ const popularResorts = [
     rating: 4.7,
     image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
   },
+  {
+    id: 4,
+    name: 'Tropical Paradise Resort',
+    location: 'Bali',
+    price: 780,
+    rating: 4.6,
+    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
+  },
+];
+
+const popularWaterParks = [
+  {
+    id: 1,
+    name: 'Aquaventure Waterpark',
+    location: 'Dubai',
+    price: 120,
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=800&q=80',
+  },
+  {
+    id: 2,
+    name: 'Tropical Islands',
+    location: 'Germany',
+    price: 95,
+    rating: 4.7,
+    image: 'https://images.unsplash.com/photo-1581244650435-575594326131?w=800&q=80',
+  },
+  {
+    id: 3,
+    name: 'Siam Park',
+    location: 'Spain',
+    price: 85,
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1581244650498-c8c91a4db1bb?w=800&q=80',
+  },
+  {
+    id: 4,
+    name: 'Beach Park',
+    location: 'Brazil',
+    price: 75,
+    rating: 4.6,
+    image: 'https://images.unsplash.com/photo-1581244650499-5b1345c9c8f9?w=800&q=80',
+  },
+];
+
+const popularVillas = [
+  {
+    id: 1,
+    name: 'Luxury Villa Estate',
+    location: 'Tuscany',
+    price: 1500,
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80',
+  },
+  {
+    id: 2,
+    name: 'Oceanfront Villa',
+    location: 'Greek Islands',
+    price: 2200,
+    rating: 5.0,
+    image: 'https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=800&q=80',
+  },
+  {
+    id: 3,
+    name: 'Mountain Retreat Villa',
+    location: 'Swiss Alps',
+    price: 1800,
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?w=800&q=80',
+  },
+  {
+    id: 4,
+    name: 'Beachfront Villa',
+    location: 'Maldives',
+    price: 2500,
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1613977257591-cf0c77d14f24?w=800&q=80',
+  },
 ];
 
 const services = [
@@ -123,7 +201,7 @@ export default function Home() {
       {/* Popular Resorts */}
       <section className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8">Popular Resorts</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           {popularResorts.map((resort) => (
             <div key={resort.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <img src={resort.image} alt={resort.name} className="w-full h-48 object-cover" />
@@ -145,6 +223,78 @@ export default function Home() {
                   <p className="text-xl font-bold">₹{resort.price}/night</p>
                   <button
                     onClick={() => window.location.href = `/booking/${resort.id}`}
+                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Popular Water Parks */}
+      <section className="max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8">Popular Water Parks</h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          {popularWaterParks.map((park) => (
+            <div key={park.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img src={park.image} alt={park.name} className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{park.name}</h3>
+                    <p className="text-gray-600 flex items-center">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      {park.location}
+                    </p>
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                    <span>{park.rating}</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-xl font-bold">₹{park.price}/person</p>
+                  <button
+                    onClick={() => window.location.href = `/booking/${park.id}`}
+                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Popular Villas */}
+      <section className="max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8">Popular Villas</h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          {popularVillas.map((villa) => (
+            <div key={villa.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img src={villa.image} alt={villa.name} className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{villa.name}</h3>
+                    <p className="text-gray-600 flex items-center">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      {villa.location}
+                    </p>
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                    <span>{villa.rating}</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-xl font-bold">₹{villa.price}/night</p>
+                  <button
+                    onClick={() => window.location.href = `/booking/${villa.id}`}
                     className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
                   >
                     Book Now
