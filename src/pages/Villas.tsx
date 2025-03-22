@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, MapPin } from 'lucide-react';
 import { villas } from '../context/WaterContext';
 

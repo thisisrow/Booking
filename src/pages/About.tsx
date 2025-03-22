@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, Users, Globe, Shield } from 'lucide-react';
 
 export default function About() {

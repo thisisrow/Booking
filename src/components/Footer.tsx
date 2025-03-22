@@ -1,5 +1,4 @@
-import React from 'react';
-import { Facebook, Twitter, Instagram, Youtube, Mail } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube} from 'lucide-react';
 
 export default function Footer() {
   return (
