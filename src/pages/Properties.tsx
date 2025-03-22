@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Home, Building, Landmark, Search, Filter, Square, Bath, Bed } from 'lucide-react';
+import { MapPin,  Search, Filter, Square, Bath, Bed } from 'lucide-react';
 import { properties } from '../context/PropertiesContext';
 
 const propertyTypes = ['All', 'Apartment', 'House', 'Land', 'Commercial'];

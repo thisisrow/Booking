@@ -1,6 +1,5 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
-import { MapPin, Square, Bath, Bed, Phone, Mail, Calendar } from 'lucide-react';
+import { MapPin, Square, Bath, Bed} from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
