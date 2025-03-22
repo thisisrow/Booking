@@ -1,12 +1,12 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Search, Star, ShoppingCart } from 'lucide-react';
-import products from "../context/ProductsContext"
-
+import { useProducts } from '../context/ProductsContext'; // Import useProducts
 
 const categories = ['All', 'Bath', 'Bedding', 'Home'];
 const priceRanges = ['All', 'Under $50', '$50-$100', 'Over $100'];
 
 export default function Products() {
+  const products = useProducts(); // Use the context
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPrice, setSelectedPrice] = useState('All');

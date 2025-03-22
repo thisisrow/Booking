@@ -1,4 +1,4 @@
-import { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 
 // Define the property type
 export type Property = {
