@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Calendar, Users, Baby, Car, Map, Info } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,26 +6,27 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { useWater } from '../context/WaterContext';
 
 export default function BookingDetails() {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
+  const { getWaterById } = useWater();
+  const place = getWaterById(Number(id));
+
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
   const [pickupService, setPickupService] = useState(false);
   const [selectedDate, setSelectedDate] = useState('');
 
-  const adultPrice = 850;
-  const childPrice = 700;
+  const adultPrice = place ? place.price : 850;
+  const childPrice = place ? place.price - 150 : 700;
   const pickupPrice = 300;
 
   const totalPrice = (adults * adultPrice) + (children * childPrice) + (pickupService ? pickupPrice : 0);
 
-  const images = [
-    'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
-    'https://images.unsplash.com/photo-1582610116397-edb318620f90?w=800&q=80',
-    'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800&q=80',
-    'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
-  ];
+  if (!place) {
+    return <div className="text-center py-12">Booking not found</div>;
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -33,10 +34,10 @@ export default function BookingDetails() {
         <div className="md:col-span-2 space-y-8">
           {/* Gallery */}
           <section>
-            <h2 className="text-2xl font-bold mb-4">Gallery</h2>
+            <h2 className="text-2xl font-bold mb-4">{place.name}</h2>
             <div className="space-y-4">
               <div className="col-span-2">
-                <img loading="lazy" src={images[0]} alt="Main" className="w-full h-96 object-cover rounded-lg" />
+                <img loading="lazy" src={place.images[0]} alt="Main" className="w-full h-96 object-cover rounded-lg" />
               </div>
               <div>
                 <Swiper
@@ -48,12 +49,12 @@ export default function BookingDetails() {
                   autoplay={{ delay: 3000 }}
                   className="rounded-lg"
                 >
-                  {images.map((image, index) => (
+                  {place.images.map((image, index) => (
                     <SwiperSlide key={index}>
-                      <img 
-                        loading="lazy" 
-                        src={image} 
-                        alt={`Gallery ${index + 1}`} 
+                      <img
+                        loading="lazy"
+                        src={image}
+                        alt={`Gallery ${index + 1}`}
                         className="w-full h-48 object-cover rounded-lg"
                       />
                     </SwiperSlide>
@@ -70,17 +71,17 @@ export default function BookingDetails() {
               <div className="bg-white p-4 rounded-lg shadow">
                 <h3 className="font-semibold mb-2">Local Attractions</h3>
                 <ul className="list-disc list-inside text-gray-600">
-                  <li>Beach Access</li>
-                  <li>Shopping District</li>
-                  <li>Historical Sites</li>
+                  {place.localAttractions.map((attraction, index) => (
+                    <li key={index}>{attraction}</li>
+                  ))}
                 </ul>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <h3 className="font-semibold mb-2">Activities</h3>
                 <ul className="list-disc list-inside text-gray-600">
-                  <li>Water Sports</li>
-                  <li>Spa Services</li>
-                  <li>Guided Tours</li>
+                  {place.activities.map((activity, index) => (
+                    <li key={index}>{activity}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -91,17 +92,18 @@ export default function BookingDetails() {
             <h2 className="text-2xl font-bold mb-4">Trip Information</h2>
             <div className="bg-white p-6 rounded-lg shadow">
               <div className="prose max-w-none">
-                <h3>About the Resort</h3>
-                <p>Experience luxury at its finest in our beachfront resort. Enjoy spectacular ocean views, world-class amenities, and impeccable service.</p>
-                
-                <h3 className="mt-4">Amenities</h3>
-                <ul>
-                  <li>Private beach access</li>
-                  <li>Swimming pool</li>
-                  <li>Spa and wellness center</li>
-                  <li>24/7 room service</li>
-                  <li>Free Wi-Fi</li>
-                </ul>
+                <h3>About the {place.type}</h3>
+                <p>{place.about}</p>
+
+                <p className="text font-bold mb-4">Amenities</p>
+                <div className="grid grid-cols-2 gap-4">
+                  {place.amenities.map((amenity, index) => (
+                    <div key={index} className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                      <span>{amenity}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -130,7 +132,7 @@ export default function BookingDetails() {
             <h2 className="text-2xl font-bold mb-4">Location</h2>
             <div className="bg-white p-4 rounded-lg shadow">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5997798838537!2d77.64163611482186!3d12.838294990945693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c8a3e4e7127%3A0x949e1e57e8374e16!2sElectronic%20City%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1647910745186!5m2!1sen!2sin"
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(place.location)}&z=15&output=embed`}
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -145,7 +147,7 @@ export default function BookingDetails() {
         <div className="md:col-span-1">
           <div className="bg-white p-6 rounded-lg shadow sticky top-24">
             <h2 className="text-2xl font-bold mb-6">Booking Summary</h2>
-            
+
             <div className="space-y-6">
               {/* Date Selection */}
               <div>

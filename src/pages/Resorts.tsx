@@ -1,40 +1,6 @@
 import React from 'react';
 import { Star, MapPin } from 'lucide-react';
-
-const resorts = [
-  {
-    id: 1,
-    name: 'Mountain View Resort',
-    location: 'Swiss Alps',
-    price: 850,
-    rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800&q=80',
-  },
-  {
-    id: 2,
-    name: 'Beachfront Paradise',
-    location: 'Maldives',
-    price: 1200,
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1582610116397-edb318620f90?w=800&q=80',
-  },
-  {
-    id: 3,
-    name: 'Desert Oasis Resort',
-    location: 'Dubai',
-    price: 950,
-    rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
-  },
-  {
-    id: 4,
-    name: 'Tropical Paradise Resort',
-    location: 'Bali',
-    price: 780,
-    rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
-  },
-];
+import { resorts } from '../context/WaterContext';
 
 export default function Resorts() {
   return (

@@ -3,111 +3,7 @@ import SocialFeed from '../components/SocialFeed';
 import CircularGallery from '../components/CircularGallery';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-
-const popularResorts = [
-  {
-    id: 1,
-    name: 'Mountain View Resort',
-    location: 'Swiss Alps',
-    price: 850,
-    rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800&q=80',
-  },
-  {
-    id: 2,
-    name: 'Beachfront Paradise',
-    location: 'Maldives',
-    price: 1200,
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1582610116397-edb318620f90?w=800&q=80',
-  },
-  {
-    id: 3,
-    name: 'Desert Oasis Resort',
-    location: 'Dubai',
-    price: 950,
-    rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
-  },
-  {
-    id: 4,
-    name: 'Tropical Paradise Resort',
-    location: 'Bali',
-    price: 780,
-    rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
-  },
-];
-
-const popularWaterParks = [
-  {
-    id: 1,
-    name: 'Aquaventure Waterpark',
-    location: 'Dubai',
-    price: 120,
-    rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=800&q=80',
-  },
-  {
-    id: 2,
-    name: 'Tropical Islands',
-    location: 'Germany',
-    price: 95,
-    rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1581244650435-575594326131?w=800&q=80',
-  },
-  {
-    id: 3,
-    name: 'Siam Park',
-    location: 'Spain',
-    price: 85,
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1581244650498-c8c91a4db1bb?w=800&q=80',
-  },
-  {
-    id: 4,
-    name: 'Beach Park',
-    location: 'Brazil',
-    price: 75,
-    rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1581244650499-5b1345c9c8f9?w=800&q=80',
-  },
-];
-
-const popularVillas = [
-  {
-    id: 1,
-    name: 'Luxury Villa Estate',
-    location: 'Tuscany',
-    price: 1500,
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80',
-  },
-  {
-    id: 2,
-    name: 'Oceanfront Villa',
-    location: 'Greek Islands',
-    price: 2200,
-    rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=800&q=80',
-  },
-  {
-    id: 3,
-    name: 'Mountain Retreat Villa',
-    location: 'Swiss Alps',
-    price: 1800,
-    rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?w=800&q=80',
-  },
-  {
-    id: 4,
-    name: 'Beachfront Villa',
-    location: 'Maldives',
-    price: 2500,
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1613977257591-cf0c77d14f24?w=800&q=80',
-  },
-];
+import { resorts, waterParks, villas } from '../context/WaterContext';
 
 const services = [
   { icon: <Wifi className="w-6 h-6" />, name: 'Free Wi-Fi' },
@@ -126,6 +22,11 @@ const galleryItems = [
 ];
 
 export default function Home() {
+  // We'll show only the first 4 of each type on the homepage
+  const popularResorts = resorts.slice(0, 4);
+  const popularWaterParks = waterParks.slice(0, 4);
+  const popularVillas = villas.slice(0, 4);
+
   return (
     <div className="space-y-16 pb-16">
       {/* Hero Section */}

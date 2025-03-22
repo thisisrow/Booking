@@ -1,32 +1,6 @@
 import React from 'react';
 import { Star, MapPin } from 'lucide-react';
-
-const villas = [
-  {
-    id: 5,
-    name: 'Luxury Villa Estate',
-    location: 'Tuscany',
-    price: 1500,
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80',
-  },
-  {
-    id: 6,
-    name: 'Oceanfront Villa',
-    location: 'Greek Islands',
-    price: 2200,
-    rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=800&q=80',
-  },
-  {
-    id: 7,
-    name: 'Mountain Retreat Villa',
-    location: 'Swiss Alps',
-    price: 1800,
-    rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?w=800&q=80',
-  },
-];
+import { villas } from '../context/WaterContext';
 
 export default function Villas() {
   return (
