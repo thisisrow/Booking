@@ -1,4 +1,5 @@
 import { Star, MapPin, Wifi, Coffee, Car, Shield, Send } from 'lucide-react';
+
 import SocialFeed from '../components/SocialFeed';
 import CircularGallery from '../components/CircularGallery';
 import 'swiper/css';
@@ -258,7 +259,7 @@ export default function Home() {
               </button>
               <button
                 type="button"
-                onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+                onClick={() => window.open('https://wa.me/6394031815', '_blank')}
                 className="flex items-center text-green-600 hover:text-green-700"
               >
                 <Send className="w-5 h-5 mr-2" />

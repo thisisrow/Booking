@@ -46,7 +46,7 @@ export default function Contact() {
               For quick responses, reach out to us on WhatsApp or our social media channels.
             </p>
             <button
-              onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+              onClick={() => window.open('https://wa.me/6394031815', '_blank')}
               className="flex items-center text-green-600 hover:text-green-700"
             >
               <Send className="w-5 h-5 mr-2" />
