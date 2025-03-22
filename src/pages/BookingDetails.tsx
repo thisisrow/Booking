@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Calendar, Users, Baby, Car, Map, Info } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function BookingDetails() {
   const { id } = useParams();
@@ -19,6 +24,7 @@ export default function BookingDetails() {
     'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
     'https://images.unsplash.com/photo-1582610116397-edb318620f90?w=800&q=80',
     'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800&q=80',
+    'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
   ];
 
   return (
@@ -28,12 +34,32 @@ export default function BookingDetails() {
           {/* Gallery */}
           <section>
             <h2 className="text-2xl font-bold mb-4">Gallery</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-4">
               <div className="col-span-2">
                 <img loading="lazy" src={images[0]} alt="Main" className="w-full h-96 object-cover rounded-lg" />
               </div>
-              <img loading="lazy" src={images[1]} alt="Secondary" className="w-full h-48 object-cover rounded-lg" />
-              <img loading="lazy" src={images[2]} alt="Secondary" className="w-full h-48 object-cover rounded-lg" />
+              <div>
+                <Swiper
+                  modules={[Autoplay, Navigation, Pagination]}
+                  spaceBetween={16}
+                  slidesPerView={2}
+                  navigation
+                  pagination={{ clickable: true }}
+                  autoplay={{ delay: 3000 }}
+                  className="rounded-lg"
+                >
+                  {images.map((image, index) => (
+                    <SwiperSlide key={index}>
+                      <img 
+                        loading="lazy" 
+                        src={image} 
+                        alt={`Gallery ${index + 1}`} 
+                        className="w-full h-48 object-cover rounded-lg"
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </section>
 
