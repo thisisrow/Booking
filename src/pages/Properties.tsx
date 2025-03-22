@@ -120,7 +120,7 @@ export default function Properties() {
             className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
           >
             <div className="relative">
-              <img src={property.image} alt={property.title} className="w-full h-48 object-cover" />
+              <img loading="lazy" src={property.image} alt={property.title} className="w-full h-48 object-cover" />
               <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
                 {property.type}
               </div>

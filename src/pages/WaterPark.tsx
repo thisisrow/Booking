@@ -43,7 +43,7 @@ export default function WaterPark() {
       <div className="grid md:grid-cols-3 gap-8">
         {resorts.map((resort) => (
           <div key={resort.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <img src={resort.image} alt={resort.name} className="w-full h-48 object-cover" />
+            <img loading="lazy" src={resort.image} alt={resort.name} className="w-full h-48 object-cover" />
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>

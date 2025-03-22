@@ -59,7 +59,7 @@ export default function Tourism() {
             className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
           >
             <div className="relative">
-              <img src={spot.image} alt={spot.name} className="w-full h-48 object-cover" />
+              <img loading="lazy" src={spot.image} alt={spot.name} className="w-full h-48 object-cover" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                 <h3 className="text-xl font-semibold text-white mb-1">{spot.name}</h3>
                 <p className="text-white/90 flex items-center text-sm">

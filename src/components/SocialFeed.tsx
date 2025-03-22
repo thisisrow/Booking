@@ -64,7 +64,7 @@ export default function SocialFeed() {
         {/* Profile Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
           <div className="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-200">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1611695434398-4f4b330623e6?w=150&h=150&fit=crop"
               alt="Profile"
               className="w-full h-full object-cover"
@@ -131,7 +131,7 @@ export default function SocialFeed() {
         <div className="grid grid-cols-3 gap-1 md:gap-7">
           {posts.map((post) => (
             <div key={post.id} className="relative aspect-square group cursor-pointer">
-              <img
+              <img loading="lazy"
                 src={`${post.image}?w=600&h=600&fit=crop`}
                 alt={`Post ${post.id}`}
                 className="w-full h-full object-cover"
@@ -155,7 +155,7 @@ export default function SocialFeed() {
           <div className="p-3 flex items-center justify-between border-b">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full overflow-hidden border">
-                <img
+                <img loading="lazy"
                   src="https://images.unsplash.com/photo-1611695434398-4f4b330623e6?w=150&h=150&fit=crop"
                   alt="Profile"
                   className="w-full h-full object-cover"
@@ -166,7 +166,7 @@ export default function SocialFeed() {
             <MoreHorizontal className="w-5 h-5 text-gray-700 cursor-pointer" />
           </div>
           
-          <img
+          <img loading="lazy"
             src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=600&fit=crop"
             alt="Featured post"
             className="w-full aspect-square object-cover"

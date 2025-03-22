@@ -35,7 +35,7 @@ export default function Villas() {
       <div className="grid md:grid-cols-3 gap-8">
         {villas.map((villa) => (
           <div key={villa.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <img src={villa.image} alt={villa.name} className="w-full h-48 object-cover" />
+            <img loading="lazy" src={villa.image} alt={villa.name} className="w-full h-48 object-cover" />
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>

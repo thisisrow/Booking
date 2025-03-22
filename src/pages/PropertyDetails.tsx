@@ -71,7 +71,7 @@ export default function PropertyDetails() {
         >
           {property.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={image} alt={`${property.title} ${index + 1}`} className="w-full h-[500px] object-cover" />
+              <img loading="lazy" src={image} alt={`${property.title} ${index + 1}`} className="w-full h-[500px] object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>

@@ -134,7 +134,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[600px]">
         <div className="absolute inset-0">
-          <img
+          <img loading="lazy"
             src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1800&q=80"
             alt="Hero"
             className="w-full h-full object-cover"
@@ -204,7 +204,7 @@ export default function Home() {
         <div className="grid md:grid-cols-4 gap-8">
           {popularResorts.map((resort) => (
             <div key={resort.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img src={resort.image} alt={resort.name} className="w-full h-48 object-cover" />
+              <img loading="lazy" src={resort.image} alt={resort.name} className="w-full h-48 object-cover" />
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -240,7 +240,7 @@ export default function Home() {
         <div className="grid md:grid-cols-4 gap-8">
           {popularWaterParks.map((park) => (
             <div key={park.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img src={park.image} alt={park.name} className="w-full h-48 object-cover" />
+              <img loading="lazy" src={park.image} alt={park.name} className="w-full h-48 object-cover" />
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -276,7 +276,7 @@ export default function Home() {
         <div className="grid md:grid-cols-4 gap-8">
           {popularVillas.map((villa) => (
             <div key={villa.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img src={villa.image} alt={villa.name} className="w-full h-48 object-cover" />
+              <img loading="lazy" src={villa.image} alt={villa.name} className="w-full h-48 object-cover" />
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>

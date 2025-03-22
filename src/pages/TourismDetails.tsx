@@ -76,7 +76,7 @@ export default function TourismDetails() {
         >
           {spot.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={image} alt={`${spot.name} ${index + 1}`} className="w-full h-[500px] object-cover" />
+              <img loading="lazy" src={image} alt={`${spot.name} ${index + 1}`} className="w-full h-[500px] object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>

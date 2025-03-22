@@ -125,7 +125,7 @@ export default function Products() {
             className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
           >
             <div className="relative aspect-square">
-              <img
+              <img loading="lazy"
                 src={product.image}
                 alt={product.name}
                 className="w-full h-full object-cover"

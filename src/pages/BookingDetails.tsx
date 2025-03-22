@@ -30,10 +30,10 @@ export default function BookingDetails() {
             <h2 className="text-2xl font-bold mb-4">Gallery</h2>
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-2">
-                <img src={images[0]} alt="Main" className="w-full h-96 object-cover rounded-lg" />
+                <img loading="lazy" src={images[0]} alt="Main" className="w-full h-96 object-cover rounded-lg" />
               </div>
-              <img src={images[1]} alt="Secondary" className="w-full h-48 object-cover rounded-lg" />
-              <img src={images[2]} alt="Secondary" className="w-full h-48 object-cover rounded-lg" />
+              <img loading="lazy" src={images[1]} alt="Secondary" className="w-full h-48 object-cover rounded-lg" />
+              <img loading="lazy" src={images[2]} alt="Secondary" className="w-full h-48 object-cover rounded-lg" />
             </div>
           </section>
 
