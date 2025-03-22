@@ -6,43 +6,12 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-const propertyData = {
-  1: {
-    title: 'Modern City Apartment',
-    type: 'Apartment',
-    location: 'Downtown, New York',
-    price: 450000,
-    bedrooms: 2,
-    bathrooms: 2,
-    area: 1200,
-    description: 'Luxurious modern apartment in the heart of New York City. Features high-end finishes, floor-to-ceiling windows, and stunning city views.',
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
-      'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&q=80',
-      'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=800&q=80',
-    ],
-    features: [
-      'Modern Kitchen',
-      'Central Air',
-      'Hardwood Floors',
-      'In-unit Laundry',
-      'Fitness Center',
-      'Parking Space',
-    ],
-    amenities: [
-      'Swimming Pool',
-      '24/7 Security',
-      'Concierge Service',
-      'Package Room',
-    ]
-  },
-  // Add more properties as needed
-};
+import { useProperties } from '../context/PropertiesContext';
 
 export default function PropertyDetails() {
-  const { id } = useParams();
-  const property = propertyData[id as keyof typeof propertyData];
+  const { id } = useParams<{ id: string }>();
+  const { getPropertyById } = useProperties();
+  const property = getPropertyById(Number(id));
 
   if (!property) {
     return <div className="text-center py-12">Property not found</div>;
@@ -84,14 +53,18 @@ export default function PropertyDetails() {
           <div className="bg-white rounded-xl shadow-lg p-6">
             <h2 className="text-2xl font-bold mb-4">Overview</h2>
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <div className="flex items-center">
-                <Bed className="w-5 h-5 text-blue-600 mr-2" />
-                <span>{property.bedrooms} Bedrooms</span>
-              </div>
-              <div className="flex items-center">
-                <Bath className="w-5 h-5 text-blue-600 mr-2" />
-                <span>{property.bathrooms} Bathrooms</span>
-              </div>
+              {property.bedrooms && (
+                <div className="flex items-center">
+                  <Bed className="w-5 h-5 text-blue-600 mr-2" />
+                  <span>{property.bedrooms} Bedrooms</span>
+                </div>
+              )}
+              {property.bathrooms && (
+                <div className="flex items-center">
+                  <Bath className="w-5 h-5 text-blue-600 mr-2" />
+                  <span>{property.bathrooms} Bathrooms</span>
+                </div>
+              )}
               <div className="flex items-center">
                 <Square className="w-5 h-5 text-blue-600 mr-2" />
                 <span>{property.area} sqft</span>

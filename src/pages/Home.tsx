@@ -1,6 +1,3 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectCoverflow } from 'swiper/modules';
 import { Star, MapPin, Wifi, Coffee, Car, Shield, Send } from 'lucide-react';
 import SocialFeed from '../components/SocialFeed';
 import CircularGallery from '../components/CircularGallery';

@@ -1,49 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Home, Building, Landmark, Search, Filter, Square, Bath, Bed } from 'lucide-react';
-
-const properties = [
-  {
-    id: 1,
-    type: 'Apartment',
-    title: 'Modern City Apartment',
-    location: 'Downtown, New York',
-    price: 450000,
-    bedrooms: 2,
-    bathrooms: 2,
-    area: 1200,
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
-  },
-  {
-    id: 2,
-    type: 'House',
-    title: 'Suburban Family Home',
-    location: 'Beverly Hills, LA',
-    price: 1200000,
-    bedrooms: 4,
-    bathrooms: 3,
-    area: 2800,
-    image: 'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80',
-  },
-  {
-    id: 3,
-    type: 'Land',
-    title: 'Development Plot',
-    location: 'Austin, Texas',
-    price: 750000,
-    area: 5000,
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80',
-  },
-  {
-    id: 4,
-    type: 'Commercial',
-    title: 'Office Space',
-    location: 'Financial District, NYC',
-    price: 2500000,
-    area: 3500,
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-  },
-];
+import { properties } from '../context/PropertiesContext';
 
 const propertyTypes = ['All', 'Apartment', 'House', 'Land', 'Commercial'];
 const priceRanges = ['Any', '0-500k', '500k-1M', '1M-2M', '2M+'];

@@ -1,56 +1,7 @@
 import  { useState } from 'react';
 import { Search, Star, ShoppingCart } from 'lucide-react';
+import products from "../context/ProductsContext"
 
-const products = [
-  {
-    id: 1,
-    name: 'Luxury Beach Towel',
-    price: 29.99,
-    rating: 4.5,
-    category: 'Bath',
-    image: 'https://images.unsplash.com/photo-1582633987110-6f4d8a307f8f?w=400&h=400&fit=crop',
-  },
-  {
-    id: 2,
-    name: 'Premium Bathrobe',
-    price: 89.99,
-    rating: 4.8,
-    category: 'Bath',
-    image: 'https://images.unsplash.com/photo-1585412459212-8def26f7e84c?w=400&h=400&fit=crop',
-  },
-  {
-    id: 3,
-    name: 'Scented Candle Set',
-    price: 34.99,
-    rating: 4.6,
-    category: 'Home',
-    image: 'https://images.unsplash.com/photo-1602874801007-aa87920204b0?w=400&h=400&fit=crop',
-  },
-  {
-    id: 4,
-    name: 'Luxury Pillow Set',
-    price: 79.99,
-    rating: 4.7,
-    category: 'Bedding',
-    image: 'https://images.unsplash.com/photo-1592789705501-f9ae4278a9c9?w=400&h=400&fit=crop',
-  },
-  {
-    id: 5,
-    name: 'Egyptian Cotton Sheets',
-    price: 129.99,
-    rating: 4.9,
-    category: 'Bedding',
-    image: 'https://images.unsplash.com/photo-1629949009765-7cff2aead6a9?w=400&h=400&fit=crop',
-  },
-  {
-    id: 6,
-    name: 'Aromatherapy Diffuser',
-    price: 49.99,
-    rating: 4.4,
-    category: 'Home',
-    image: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?w=400&h=400&fit=crop',
-  },
-];
 
 const categories = ['All', 'Bath', 'Bedding', 'Home'];
 const priceRanges = ['All', 'Under $50', '$50-$100', 'Over $100'];
