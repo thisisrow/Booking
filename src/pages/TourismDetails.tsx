@@ -6,51 +6,12 @@ import { Autoplay, Navigation as SwiperNavigation, Pagination } from 'swiper/mod
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-const tourismData = {
-  1: {
-    name: 'Taj Mahal',
-    location: 'Agra, India',
-    description: 'The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra, India. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal.',
-    images: [
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80',
-      'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?w=800&q=80'
-    ],
-    bestTime: 'October to March',
-    weather: 'Tropical with hot summers and mild winters',
-    coordinates: '27.1751° N, 78.0421° E',
-    attractions: [
-      'Main Mausoleum',
-      'Mosque and Jawab',
-      'Mughal Gardens',
-      'Yamuna River View'
-    ]
-  },
-  2: {
-    name: 'Santorini',
-    location: 'Greece',
-    description: 'Santorini is one of the Cyclades islands in the Aegean Sea. It was devastated by a volcanic eruption in the 16th century BC, forever shaping its rugged landscape. The whitewashed, cubiform houses of its 2 principal towns, Fira and Oia, cling to cliffs above an underwater caldera.',
-    images: [
-      'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=800&q=80',
-      'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
-      'https://images.unsplash.com/photo-1571406252241-db3117da6c36?w=800&q=80'
-    ],
-    bestTime: 'April to October',
-    weather: 'Mediterranean climate with warm summers',
-    coordinates: '36.3932° N, 25.4615° E',
-    attractions: [
-      'Oia Sunset Point',
-      'Fira Town',
-      'Red Beach',
-      'Ancient Thera'
-    ]
-  }
-};
+import { useTourism } from '../context/TourismContext';
 
 export default function TourismDetails() {
-  const { id } = useParams();
-  const spot = tourismData[id as keyof typeof tourismData];
+  const { id } = useParams<{ id: string }>();
+  const { getTourismSpotById } = useTourism();
+  const spot = getTourismSpotById(Number(id));
 
   if (!spot) {
     return <div className="text-center py-12">Destination not found</div>;
@@ -102,7 +63,7 @@ export default function TourismDetails() {
 
       <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
         <h2 className="text-2xl font-bold mb-4">About</h2>
-        <p className="text-gray-600 leading-relaxed">{spot.description}</p>
+        <p className="text-gray-600 leading-relaxed">{spot.about}</p>
       </div>
 
       <div className="bg-white rounded-xl shadow-lg p-8">

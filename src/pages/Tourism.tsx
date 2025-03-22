@@ -1,51 +1,7 @@
 import React from 'react';
 import { MapPin, Navigation } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const tourismSpots = [
-  {
-    id: 1,
-    name: 'Taj Mahal',
-    location: 'Agra, India',
-    description: 'An ivory-white marble mausoleum on the right bank of the river Yamuna.',
-    image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&q=80',
-  },
-  {
-    id: 2,
-    name: 'Santorini',
-    location: 'Greece',
-    description: 'Famous for its dramatic views, stunning sunsets, and white-washed houses.',
-    image: 'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=800&q=80',
-  },
-  {
-    id: 3,
-    name: 'Machu Picchu',
-    location: 'Peru',
-    description: 'An ancient Incan city set high in the Andes Mountains.',
-    image: 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&q=80',
-  },
-  {
-    id: 4,
-    name: 'Great Barrier Reef',
-    location: 'Australia',
-    description: 'The world\'s largest coral reef system, visible from outer space.',
-    image: 'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=800&q=80',
-  },
-  {
-    id: 5,
-    name: 'Northern Lights',
-    location: 'Iceland',
-    description: 'Natural light display in the Earth\'s sky, predominantly seen in high-latitude regions.',
-    image: 'https://images.unsplash.com/photo-1579033461380-adb47c3eb938?w=800&q=80',
-  },
-  {
-    id: 6,
-    name: 'Venice',
-    location: 'Italy',
-    description: 'Famous for its canals, Gothic architecture, and traditional gondolas.',
-    image: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
-  },
-];
+import { tourismSpots } from '../context/TourismContext';
 
 export default function Tourism() {
   return (
