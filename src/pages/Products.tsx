@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Search, Filter, Star, ShoppingCart } from 'lucide-react';
+import  { useState } from 'react';
+import { Search, Star, ShoppingCart } from 'lucide-react';
 
 const products = [
   {

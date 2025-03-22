@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart, MessageCircle, Bookmark, Send, MoreHorizontal, Settings, Grid, Video, PenSquare as PersonSquare } from 'lucide-react';
 
 const posts = [

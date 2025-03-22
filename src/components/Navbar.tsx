@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Building2, Castle, Info, Phone, Menu, Waves, Compass, Users, Home as HomeIcon, MoreHorizontal, ShoppingBag } from 'lucide-react';
+import { Home, Building2, Castle, Info, Phone, Waves, Compass, Users, Home as HomeIcon, MoreHorizontal, ShoppingBag } from 'lucide-react';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [showMore, setShowMore] = useState(false);
   const location = useLocation();
@@ -31,25 +30,25 @@ export default function Navbar() {
   const navItems = [
     { path: '/', label: 'Home', icon: <Home className="w-5 h-5" /> },
     { path: '/resorts', label: 'Resorts', icon: <Building2 className="w-5 h-5" /> },
-    { path: '/products', label: 'Products', icon: <ShoppingBag className="w-5 h-5" /> },
-    { path: '/villas', label: 'Villas', icon: <Castle className="w-5 h-5" /> },
     { path: '/water-park', label: 'Water Park', icon: <Waves className="w-5 h-5" /> },
+    { path: '/villas', label: 'Villas', icon: <Castle className="w-5 h-5" /> },
     { path: '/tourism', label: 'Tourism', icon: <Compass className="w-5 h-5" /> },
+    { path: '/products', label: 'Products', icon: <ShoppingBag className="w-5 h-5" /> },
     { path: '/properties', label: 'Properties', icon: <HomeIcon className="w-5 h-5" /> },
     { path: '/collaboration', label: 'Collaborate', icon: <Users className="w-5 h-5" /> },
     { path: '/about', label: 'About Us', icon: <Info className="w-5 h-5" /> },
     { path: '/contact', label: 'Contact', icon: <Phone className="w-5 h-5" /> },
   ];
 
-  const mainNavItems = navItems.slice(0, 4);
-  const moreNavItems = navItems.slice(4);
+  const mainNavItems = navItems.slice(0, 5);
+  const moreNavItems = navItems.slice(5);
 
   const isActive = (path: string) => location.pathname === path;
 
   if (isMobile) {
     return (
       <nav className="fixed bottom-0 left-0 right-0 bg-white shadow-lg z-[100]">
-        <div className="grid grid-cols-5 overflow-x-auto">
+        <div className="grid grid-cols-6 overflow-x-auto">
           {mainNavItems.map((item) => (
             <Link
               key={item.path}
