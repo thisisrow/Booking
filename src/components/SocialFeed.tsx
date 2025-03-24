@@ -207,7 +207,7 @@ export default function SocialFeed() {
   <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
     Latest YouTube Videos
   </h2>
-  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-full mx-auto">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 max-w-full mx-auto">
     {/* Video 1 */}
     <div className="aspect-w-16 aspect-h-9">
       <iframe
