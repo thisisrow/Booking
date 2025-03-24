@@ -1,7 +1,7 @@
 import { MapPin, Navigation } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { tourismSpots } from '../context/TourismContext';
-
+import TiltCard from '../components/TiltCard';
 export default function Tourism() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -13,6 +13,7 @@ export default function Tourism() {
             key={spot.id} 
             className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
           >
+            <TiltCard>
             <div className="relative">
               <img loading="lazy" src={spot.image} alt={spot.name} className="w-full h-48 object-cover" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
@@ -30,6 +31,7 @@ export default function Tourism() {
                 <Navigation className="w-4 h-4 ml-2" />
               </div>
             </div>
+            </TiltCard>
           </Link>
         ))}
       </div>

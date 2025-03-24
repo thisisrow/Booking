@@ -1,5 +1,6 @@
 import { Star, MapPin } from 'lucide-react';
 import { villas } from '../context/WaterContext';
+import TiltCard from '../components/TiltCard';
 
 export default function Villas() {
   return (
@@ -7,6 +8,7 @@ export default function Villas() {
       <h1 className="text-3xl font-bold mb-8">Luxury Villas</h1>
       <div className="grid md:grid-cols-3 gap-8">
         {villas.map((villa) => (
+          <TiltCard>
           <div key={villa.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
             <img loading="lazy" src={villa.image} alt={villa.name} className="w-full h-48 object-cover" />
             <div className="p-6">
@@ -34,6 +36,7 @@ export default function Villas() {
               </div>
             </div>
           </div>
+          </TiltCard>
         ))}
       </div>
     </div>

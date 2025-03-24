@@ -1,5 +1,6 @@
 import { Star, MapPin } from 'lucide-react';
 import { waterParks } from '../context/WaterContext';
+import TiltCard from '../components/TiltCard';
 
 export default function WaterPark() {
   return (
@@ -7,6 +8,7 @@ export default function WaterPark() {
       <h1 className="text-3xl font-bold mb-8">Water Park</h1>
       <div className="grid md:grid-cols-3 gap-8">
         {waterParks.map((waterPark) => (
+          <TiltCard>
           <div key={waterPark.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
             <img loading="lazy" src={waterPark.image} alt={waterPark.name} className="w-full h-48 object-cover" />
             <div className="p-6">
@@ -34,6 +36,7 @@ export default function WaterPark() {
               </div>
             </div>
           </div>
+          </TiltCard>
         ))}
       </div>
     </div>

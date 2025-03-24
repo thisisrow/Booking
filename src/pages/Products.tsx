@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search, Star, ShoppingCart } from 'lucide-react';
-import { useProducts } from '../context/ProductsContext'; // Import useProducts
+import { useProducts } from '../context/ProductsContext'; 
+import TiltCard from '../components/TiltCard';
 
 const categories = ['All', 'Bath', 'Bedding', 'Home'];
 const priceRanges = ['All', 'Under $50', '$50-$100', 'Over $100'];
@@ -75,6 +76,7 @@ export default function Products() {
             key={product.id}
             className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
           >
+            <TiltCard>
             <div className="relative aspect-square">
               <img loading="lazy"
                 src={product.image}
@@ -95,6 +97,7 @@ export default function Products() {
                 </button>
               </div>
             </div>
+            </TiltCard>
           </div>
         ))}
       </div>

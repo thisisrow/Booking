@@ -211,8 +211,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center">Our Services</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center transform transition duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-">
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-semibold">{service.name}</h3>
