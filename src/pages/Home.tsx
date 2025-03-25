@@ -1,3 +1,4 @@
+import { Send } from 'lucide-react';
 import SocialFeed from '../components/SocialFeed';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
