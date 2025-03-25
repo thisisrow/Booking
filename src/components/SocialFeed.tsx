@@ -75,12 +75,16 @@ export default function SocialFeed() {
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4 flex-wrap">
                 <h2 className="text-xl font-semibold">palgharcity48</h2>
+                 <a href="https://www.instagram.com/palgharcity48/">
                 <button className="px-4 py-1.5 bg-gray-100 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors">
                   Follow
                 </button>
+                </a>
+                 <a href="https://www.instagram.com/palgharcity48/">
                 <button className="px-4 py-1.5 bg-gray-100 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors">
                   Message
                 </button>
+                </a>
                 <Settings className="w-5 h-5 text-gray-700 cursor-pointer" />
               </div>
 
@@ -103,7 +107,7 @@ export default function SocialFeed() {
                 <h1 className="font-semibold">palgharcity48 Official</h1>
                 <p className="text-sm text-gray-700">Sachin Vishwkarma | 🇮🇳 Food | Travel | Explore</p>
                 <p className="text-sm text-gray-700">📍 Palghar | Mumbai | Prayagraj | 𝗗𝗿𝗼𝗻𝗲 𝗣𝗶𝗹𝗼𝘁 🇮🇳 <br></br>Admin of @palgharcity48 <br></br>Explore | Traveling | Foody🔸Blogger |</p>
-                <a href="#" className="text-sm text-blue-900 font-medium">palgharcity48.com</a>
+                <a href="https://www.instagram.com/palgharcity48/" className="text-sm text-blue-900 font-medium">palgharcity48.com</a>
               </div>
             </div>
           </div>
