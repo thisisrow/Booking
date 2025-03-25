@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Castle } from 'lucide-react';
 
 export default function SplashScreen() {
   const [show, setShow] = useState(true);
