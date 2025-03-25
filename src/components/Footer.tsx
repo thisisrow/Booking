@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">About Us</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              LuxStays offers premium accommodations for the discerning traveler, ensuring unforgettable experiences in the world's most beautiful locations.
+              palgharcity48 offers premium accommodations for the discerning traveler, ensuring unforgettable experiences in the world's most beautiful locations.
             </p>
           </div>
           <div>
@@ -26,7 +26,7 @@ export default function Footer() {
               <li>123 Luxury Avenue</li>
               <li>Paradise City, PC 12345</li>
               <li>+1 (555) 123-4567</li>
-              <li>support@luxstays.com</li>
+              <li>support@palgharcity48.com</li>
             </ul>
           </div>
           <div>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-200 dark:border-gray-700 pt-8">
           <p className="text-center text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} LuxStays. All rights reserved.
+            © {new Date().getFullYear()} palgharcity48. All rights reserved.
           </p>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function SplashScreen() {
       <div className="text-center">
         <Castle className="w-16 h-16 text-blue-600 animate-bounce mb-4" />
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          LuxStays
+          palgharcity48
         </h1>
       </div>
     </div>

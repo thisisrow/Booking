@@ -1,32 +1,8 @@
-import { Star, MapPin, Wifi, Coffee, Car, Shield, Send } from 'lucide-react';
-
 import SocialFeed from '../components/SocialFeed';
-import CircularGallery from '../components/CircularGallery';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import { resorts, waterParks, villas } from '../context/WaterContext';
-
-const services = [
-  { icon: <Wifi className="w-6 h-6" />, name: 'Free Wi-Fi' },
-  { icon: <Coffee className="w-6 h-6" />, name: 'Restaurant' },
-  { icon: <Car className="w-6 h-6" />, name: 'Pickup Service' },
-  { icon: <Shield className="w-6 h-6" />, name: '24/7 Security' },
-];
-
-const galleryItems = [
-  { image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80', text: 'Luxury Suite' },
-  { image: 'https://images.unsplash.com/photo-1582610116397-edb318620f90?w=800&q=80', text: 'Ocean View' },
-  { image: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800&q=80', text: 'Mountain Retreat' },
-  { image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80', text: 'Desert Villa' },
-  { image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80', text: 'Private Pool' },
-  { image: 'https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=800&q=80', text: 'Garden View' },
-];
 
 export default function Home() {
-  // We'll show only the first 4 of each type on the homepage
-  const popularResorts = resorts.slice(0, 4);
-  const popularWaterParks = waterParks.slice(0, 4);
-  const popularVillas = villas.slice(0, 4);
 
   return (
     <div className="space-y-16 pb-16">

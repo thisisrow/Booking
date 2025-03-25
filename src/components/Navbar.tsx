@@ -109,7 +109,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <Castle className="w-8 h-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-800">LuxStays</span>
+              <span className="ml-2 text-xl font-bold text-gray-800">palgharcity48</span>
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-1">

@@ -26,7 +26,7 @@ export default function Contact() {
                 <Mail className="w-6 h-6 text-blue-600 mr-3" />
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-gray-600">support@luxstays.com</p>
+                  <p className="text-gray-600">support@palgharcity48.com</p>
                 </div>
               </div>
               <div className="flex items-center">

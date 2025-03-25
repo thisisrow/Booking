@@ -74,7 +74,7 @@ export default function SocialFeed() {
           <div className="flex-grow">
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4 flex-wrap">
-                <h2 className="text-xl font-semibold">luxstays</h2>
+                <h2 className="text-xl font-semibold">palgharcity48</h2>
                 <button className="px-4 py-1.5 bg-gray-100 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors">
                   Follow
                 </button>
@@ -100,10 +100,10 @@ export default function SocialFeed() {
               </div>
               
               <div>
-                <h1 className="font-semibold">LuxStays Official</h1>
+                <h1 className="font-semibold">palgharcity48 Official</h1>
                 <p className="text-sm text-gray-700">Luxury Stays & Experiences</p>
                 <p className="text-sm text-gray-700">Discover the world's most exclusive properties</p>
-                <a href="#" className="text-sm text-blue-900 font-medium">luxstays.com</a>
+                <a href="#" className="text-sm text-blue-900 font-medium">palgharcity48.com</a>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function SocialFeed() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="font-semibold text-sm">luxstays</span>
+              <span className="font-semibold text-sm">palgharcity48</span>
             </div>
             <MoreHorizontal className="w-5 h-5 text-gray-700 cursor-pointer" />
           </div>
@@ -187,7 +187,7 @@ export default function SocialFeed() {
             </div>
             
             <div className="text-sm">
-              <span className="font-semibold">luxstays</span>
+              <span className="font-semibold">palgharcity48</span>
               <span className="ml-2">Experience luxury like never before at our exclusive mountain retreat ⛰️✨</span>
             </div>
             

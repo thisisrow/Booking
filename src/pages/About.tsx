@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">About LuxStays</h1>
+        <h1 className="text-4xl font-bold mb-4">About palgharcity48</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Discover luxury accommodations handpicked for the discerning traveler. We provide exceptional
           stays with unparalleled service.
@@ -15,7 +15,7 @@ export default function About() {
         <div>
           <h2 className="text-2xl font-bold mb-4">Our Story</h2>
           <p className="text-gray-600 mb-4">
-            Founded in 2020, LuxStays has grown from a small startup to a leading luxury
+            Founded in 2020, palgharcity48 has grown from a small startup to a leading luxury
             accommodation provider. Our mission is to offer unforgettable experiences in the world's
             most beautiful locations.
           </p>
