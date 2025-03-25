@@ -70,7 +70,7 @@ export default function SocialFeed() {
               className="w-full h-full object-cover"
             />
           </div>
-          
+
           <div className="flex-grow">
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4 flex-wrap">
@@ -83,7 +83,7 @@ export default function SocialFeed() {
                 </button>
                 <Settings className="w-5 h-5 text-gray-700 cursor-pointer" />
               </div>
-              
+
               <div className="flex gap-8">
                 <div className="text-sm">
                   <span className="font-semibold">763</span>
@@ -98,11 +98,11 @@ export default function SocialFeed() {
                   <span className="text-gray-500 ml-1">following</span>
                 </div>
               </div>
-              
+
               <div>
                 <h1 className="font-semibold">palgharcity48 Official</h1>
-                <p className="text-sm text-gray-700">Luxury Stays & Experiences</p>
-                <p className="text-sm text-gray-700">Discover the world's most exclusive properties</p>
+                <p className="text-sm text-gray-700">Sachin Vishwkarma | 🇮🇳 Food | Travel | Explore</p>
+                <p className="text-sm text-gray-700">📍 Palghar | Mumbai | Prayagraj | 𝗗𝗿𝗼𝗻𝗲 𝗣𝗶𝗹𝗼𝘁 🇮🇳 <br></br>Admin of @palgharcity48 <br></br>Explore | Traveling | Foody🔸Blogger |</p>
                 <a href="#" className="text-sm text-blue-900 font-medium">palgharcity48.com</a>
               </div>
             </div>
@@ -165,13 +165,13 @@ export default function SocialFeed() {
             </div>
             <MoreHorizontal className="w-5 h-5 text-gray-700 cursor-pointer" />
           </div>
-          
+
           <img loading="lazy"
             src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=600&fit=crop"
             alt="Featured post"
             className="w-full aspect-square object-cover"
           />
-          
+
           <div className="p-3">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-4">
@@ -181,75 +181,75 @@ export default function SocialFeed() {
               </div>
               <Bookmark className="w-6 h-6 cursor-pointer hover:text-gray-600 transition-colors" />
             </div>
-            
+
             <div className="mb-2">
               <span className="font-semibold text-sm">156,547 likes</span>
             </div>
-            
+
             <div className="text-sm">
               <span className="font-semibold">palgharcity48</span>
               <span className="ml-2">Experience luxury like never before at our exclusive mountain retreat ⛰️✨</span>
             </div>
-            
+
             <button className="text-gray-500 text-xs mt-1 hover:text-gray-900">
               View all 2,453 comments
             </button>
-            
+
             <div className="text-gray-400 text-[10px] uppercase mt-1">
               2 days ago
             </div>
           </div>
         </div>
       </div>
-        
-        {/* YouTube Videos */}
+
+      {/* YouTube Videos */}
       <div className="mt-16 mx-2 overflow-hidden ">
-  <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
-    Latest YouTube Videos
-  </h2>
-  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 max-w-full mx-auto">
-    {/* Video 1 */}
-    <div className="aspect-w-16 aspect-h-9">
-      <iframe
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        title="YouTube video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="w-full h-full rounded-xl"
-      ></iframe>
-    </div>
-    {/* Video 2 */}
-    <div className="aspect-w-16 aspect-h-9">
-      <iframe
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        title="YouTube video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="w-full h-full rounded-xl"
-      ></iframe>
-    </div>
-    {/* Video 3 */}
-    <div className="aspect-w-16 aspect-h-9">
-      <iframe
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        title="YouTube video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="w-full h-full rounded-xl"
-      ></iframe>
-    </div>
-    {/* Video 4 */}
-    <div className="aspect-w-16 aspect-h-9">
-      <iframe
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        title="YouTube video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="w-full h-full rounded-xl"
-      ></iframe>
-    </div>
-  </div>
-</div>
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+          Latest YouTube Videos
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 max-w-full mx-auto">
+          {/* Video 1 */}
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full rounded-xl"
+            ></iframe>
+          </div>
+          {/* Video 2 */}
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full rounded-xl"
+            ></iframe>
+          </div>
+          {/* Video 3 */}
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full rounded-xl"
+            ></iframe>
+          </div>
+          {/* Video 4 */}
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full rounded-xl"
+            ></iframe>
+          </div>
+        </div>
+      </div>
 
     </section>
   );
