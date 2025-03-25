@@ -12,7 +12,8 @@ import {
   Home as HomeIcon,
   MoreHorizontal,
   ShoppingBag,
-  Menu
+  Menu,
+  X
 } from "lucide-react";
 
 export default function Navbar() {
@@ -131,7 +132,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* ✅ Convert Navbar to Dropdown Between 755px - 1197px */}
+          {/* ✅ Convert Navbar to Sidebar Between 755px - 1197px */}
           {screenSize >= 755 && screenSize <= 1197 ? (
             <div className="relative more-menu">
               <button
@@ -141,18 +142,31 @@ export default function Navbar() {
                 <Menu className="w-6 h-6" />
               </button>
               {showMore && (
-                <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-md w-48">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      className={`block px-4 py-2 text-gray-700 hover:bg-gray-100 ${
-                        isActive(item.path) ? "text-blue-600 font-bold" : ""
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
+                <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-[100]">
+                  <div className="fixed left-0 top-0 bottom-0 bg-white shadow-lg w-64 z-[101]">
+                    <div className="flex justify-between items-center p-4 border-b border-gray-200">
+                      <span className="text-lg font-bold">Menu</span>
+                      <button
+                        onClick={() => setShowMore(false)}
+                        className="text-gray-600 hover:text-blue-600"
+                      >
+                        <X className="w-6 h-6" />
+                      </button>
+                    </div>
+                    <div className="p-4">
+                      {navItems.map((item) => (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className={`block px-4 py-2 text-gray-700 hover:bg-gray-100 ${
+                            isActive(item.path) ? "text-blue-600 font-bold" : ""
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
