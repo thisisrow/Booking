@@ -52,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* Circular Gallery */}
-      <section className="relative h-[600px] bg-gray-900">
+      {/* <section className="relative h-[600px] bg-gray-900">
         <CircularGallery
           items={galleryItems}
           bend={3}
@@ -60,10 +60,10 @@ export default function Home() {
           borderRadius={0.05}
           font="bold 30px DM Sans"
         />
-      </section>
+      </section> */}
 
       {/* Search Form */}
-      <section className="max-w-7xl mx-auto px-4">
+      {/* <section className="max-w-7xl mx-auto px-4">
         <div className="bg-white rounded-xl shadow-lg p-6 -mt-32 relative z-10">
           <div className="grid md:grid-cols-4 gap-4">
             <div className="space-y-2">
@@ -95,46 +95,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Popular Resorts */}
-      <section className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8">Popular Resorts</h2>
-        <div className="grid md:grid-cols-4 gap-8">
-          {popularResorts.map((resort) => (
-            <div key={resort.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img loading="lazy" src={resort.image} alt={resort.name} className="w-full h-48 object-cover" />
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{resort.name}</h3>
-                    <p className="text-gray-600 flex items-center">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      {resort.location}
-                    </p>
-                  </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                    <span>{resort.rating}</span>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center">
-                  <p className="text-xl font-bold">₹{resort.price}/night</p>
-                  <button
-                    onClick={() => window.location.href = `/booking/${resort.id}`}
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
-                  >
-                    Book Now
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      </section> */}
       {/* Popular Water Parks */}
-      <section className="max-w-7xl mx-auto px-4">
+      {/* <section className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8">Popular Water Parks</h2>
         <div className="grid md:grid-cols-4 gap-8">
           {popularWaterParks.map((park) => (
@@ -167,10 +130,45 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
+      {/* Popular Resorts */}
+      {/* <section className="max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8">Popular Resorts</h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          {popularResorts.map((resort) => (
+            <div key={resort.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img loading="lazy" src={resort.image} alt={resort.name} className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{resort.name}</h3>
+                    <p className="text-gray-600 flex items-center">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      {resort.location}
+                    </p>
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                    <span>{resort.rating}</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-xl font-bold">₹{resort.price}/night</p>
+                  <button
+                    onClick={() => window.location.href = `/booking/${resort.id}`}
+                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section> */}
 
       {/* Popular Villas */}
-      <section className="max-w-7xl mx-auto px-4">
+      {/* <section className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8">Popular Villas</h2>
         <div className="grid md:grid-cols-4 gap-8">
           {popularVillas.map((villa) => (
@@ -203,10 +201,10 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Services */}
-      <section className="bg-gray-50 py-16">
+      {/* <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Services</h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -220,7 +218,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Social Feed */}
       <SocialFeed />
