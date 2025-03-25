@@ -65,7 +65,7 @@ export default function SocialFeed() {
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
           <div className="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-200">
             <img loading="lazy"
-              src="https://images.unsplash.com/photo-1611695434398-4f4b330623e6?w=150&h=150&fit=crop"
+              src="https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg?w=150&h=150&fit=crop"
               alt="Profile"
               className="w-full h-full object-cover"
             />
