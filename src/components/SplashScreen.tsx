@@ -14,10 +14,17 @@ export default function SplashScreen() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-gray-900 transition-opacity duration-500">
       <div className="text-center">
-        <Castle className="w-16 h-16 text-blue-600 animate-bounce mb-4" />
+      <div className="flex flex-col items-center">
+        <img
+        loading="lazy"
+        src="https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg?w=150&h=150&fit=crop"
+        alt="Profile"
+        className="w-16 h-16 object-cover mb-4"
+        />
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          palgharcity48
+        palgharcity48
         </h1>
+      </div>
       </div>
     </div>
   );
