@@ -42,11 +42,20 @@ export default function Home() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-xl">
-            <h1 className="text-5xl font-bold mb-6">Discover Your Perfect Stay</h1>
-            <p className="text-xl mb-8">Experience luxury and comfort in our handpicked collection of resorts and villas</p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
-              Explore Now
-            </button>
+            <h1 className="text-5xl font-bold mb-6">Wellcome to PalgharCity48</h1>
+            <p className="text-lg italic">- by <span className="font-semibold">-by Sachin Vishwakarma</span></p>
+            <p className="text-xl mb-8">"Experience the thrill and excitement at our world-class water parks!"</p>
+            <div className="flex space-x-4">
+              <a href="https://www.instagram.com" target="_blank" className="bg-pink-500 text-white px-4 py-2 rounded-lg text-lg font-semibold hover:bg-pink-600 transition-colors duration-200">
+              Instagram
+              </a>
+              <a href="https://www.youtube.com" target="_blank" className="bg-red-600 text-white px-4 py-2 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors duration-200">
+              YouTube
+              </a>
+              <a href="https://www.facebook.com" target="_blank" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
+              Facebook
+              </a>
+            </div>
           </div>
         </div>
       </section>
