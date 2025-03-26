@@ -65,55 +65,34 @@ const resorts: Water[] = [
         ],
         locationUrl: 'https://maps.google.com/?q=Maldives'
     },
-    {
+ {
         id: 3,
-        type: 'Resort',
-        name: 'Desert Oasis Resort',
-        location: 'Dubai',
-        price: 950,
-        rating: 4.7,
-        image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
+        type: 'Resort', 
+        name: 'Dream World',
+        location: 'Virar',
+        price: 550,
+        rating: 3.9,
+        image: 'https://res.cloudinary.com/db1nsxnit/image/upload/v1742899513/images_1_ckfbpe.jpg?w=800&q=80',
         images: [
-            'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
-            'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80',
-            'https://images.unsplash.com/photo-1526234362653-3b75be151dd2?w=800&q=80'
+            'https://res.cloudinary.com/db1nsxnit/image/upload/v1742899513?w=800&q=80',
+            'https://res.cloudinary.com/db1nsxnit/image/upload/v1742899513?w=800&q=80',
+            'https://res.cloudinary.com/db1nsxnit/image/upload/v1742899513?w=800&q=80'
         ],
-        localAttractions: ['Burj Khalifa', 'Dubai Mall', 'Desert Safari'],
-        activities: ['Camel Riding', 'Shopping', 'Fine Dining'],
-        about: 'Desert Oasis Resort blends modern luxury with traditional Arabian charm, set against the backdrop of Dubais golden sands.',
+        localAttractions: ['Coral Reefs', 'Vaadhoo Island', 'Male City'],
+        activities: ['Snorkeling', 'Diving', 'Beach Relaxation'],
+        about: 'add text ',
         amenities: [
             'Swimming Pool',
             '24/7 Security',
             'Concierge Service',
             'Package Room',
         ],
-        locationUrl: 'https://maps.google.com/?q=Dubai'
+        locationUrl: 'https://maps.app.goo.gl/JTh528cHFHRVYEQ8A'
     },
-    {
-        id: 4,
-        type: 'Resort',
-        name: 'Tropical Paradise Resort',
-        location: 'Bali',
-        price: 780,
-        rating: 4.6,
-        image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
-            'https://images.unsplash.com/photo-1539367628448-704b1db2e4e2?w=800&q=80',
-            'https://images.unsplash.com/photo-1524678606370-a2f0e366ad7d?w=800&q=80'
-        ],
-        localAttractions: ['Uluwatu Temple', 'Ubud Monkey Forest', 'Tanah Lot'],
-        activities: ['Surfing', 'Yoga', 'Cultural Tours'],
-        about: 'Tropical Paradise Resort in Bali offers a serene retreat amidst lush jungles, vibrant culture, and stunning beaches.',
-        amenities: [
-            'Swimming Pool',
-            '24/7 Security',
-            'Concierge Service',
-            'Package Room',
-        ],
-        locationUrl: 'https://maps.google.com/?q=Bali'
-    }
+
+
 ];
+
 
 const waterParks: Water[] = [
     {
@@ -121,7 +100,7 @@ const waterParks: Water[] = [
         type: 'Water Park',
         name: 'Mountain Splash Park',
         location: 'Swiss Alps',
-        price: 1,
+        price: 10,
         rating: 4.8,
         image: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800&q=80',
         images: [
@@ -145,7 +124,7 @@ const waterParks: Water[] = [
         type: 'Water Park',
         name: 'Ocean Wave Park',
         location: 'Maldives',
-        price: 1200,
+        price: 10,
         rating: 4.9,
         image: 'https://images.unsplash.com/photo-1582610116397-edb318620f90?w=800&q=80',
         images: [
@@ -169,7 +148,7 @@ const waterParks: Water[] = [
         type: 'Water Park',
         name: 'Desert Splash Park',
         location: 'Dubai',
-        price: 950,
+        price: 11,
         rating: 4.7,
         image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
         images: [
