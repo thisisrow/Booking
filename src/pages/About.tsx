@@ -1,5 +1,36 @@
-import { Award, Users, Globe, Shield } from 'lucide-react';
-
+import { Award, Users, Globe, Shield, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+const team = [
+  {
+    name: "Sachin Vishwakarma",
+    role: "Founder & CEO",
+    image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg",
+    social: {
+      instagram: "https://www.instagram.com/palgharcity48/",
+      twitter: "https://twitter.com/palgharcity48",
+      linkedin: "https://linkedin.com/in/palgharcity48"
+    }
+  },
+  {
+    name: "John Doe",
+    role: "Marketing Director",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    social: {
+      instagram: "#",
+      twitter: "#",
+      linkedin: "#"
+    }
+  },
+  {
+    name: "Jane Smith",
+    role: "Operations Manager",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    social: {
+      instagram: "#",
+      twitter: "#",
+      linkedin: "#"
+    }
+  }
+];
 export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -74,15 +105,78 @@ export default function About() {
         </div>
       </div>
 
-      <div className="text-center">
-        <h2 className="text-2xl font-bold mb-4">Ready to Experience Luxury?</h2>
-        <p className="text-gray-600 mb-6">
-          Browse our collection of premium properties and start planning your next unforgettable stay.
-        </p>
-        <button className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
-          Explore Properties
-        </button>
-      </div>
+       {/* Team Section */}
+       <section className="mb-16">
+        <h2 className="text-3xl font-bold mb-8 text-center">Our Team</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {team.map((member) => (
+            <div key={member.name} className="bg-white rounded-xl shadow-lg p-6 text-center">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+              <p className="text-gray-600 mb-4">{member.role}</p>
+              <div className="flex justify-center space-x-4">
+                <a href={member.social.instagram} className="text-gray-600 hover:text-pink-600">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href={member.social.twitter} className="text-gray-600 hover:text-blue-400">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href={member.social.linkedin} className="text-gray-600 hover:text-blue-600">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Terms and Conditions */}
+      <section id="terms" className="mb-16">
+        <h2 className="text-3xl font-bold mb-8">Terms and Conditions</h2>
+        <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="prose max-w-none">
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing and using palgharcity48's services, you agree to be bound by these terms and conditions.</p>
+
+            <h3>2. Booking and Cancellation</h3>
+            <ul>
+              <li>All bookings are subject to availability</li>
+              <li>Cancellations must be made at least 48 hours before check-in</li>
+              <li>Refunds are subject to our cancellation policy</li>
+            </ul>
+
+            <h3>3. Payment Terms</h3>
+            <p>Full payment is required at the time of booking. We accept payments through secure payment gateways.</p>
+
+            <h3>4. Privacy Policy</h3>
+            <p>We respect your privacy and protect your personal information. Read our full privacy policy below.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Privacy Policy */}
+      <section id="privacy" className="mb-16">
+        <h2 className="text-3xl font-bold mb-8">Privacy Policy</h2>
+        <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="prose max-w-none">
+            <h3>1. Information Collection</h3>
+            <p>We collect information that you provide directly to us when making a booking or creating an account.</p>
+
+            <h3>2. Use of Information</h3>
+            <p>We use the collected information to process your bookings and provide you with the best possible service.</p>
+
+            <h3>3. Information Sharing</h3>
+            <p>We do not sell or share your personal information with third parties except as necessary to provide our services.</p>
+
+            <h3>4. Data Security</h3>
+            <p>We implement appropriate security measures to protect your personal information.</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
