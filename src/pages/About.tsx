@@ -1,4 +1,4 @@
-import { Award, Users, Globe, Shield, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Award, Users, Globe, Shield, Twitter, Instagram, Linkedin } from 'lucide-react';
 const team = [
   {
     name: "Sachin Vishwakarma",
