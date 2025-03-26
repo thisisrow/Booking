@@ -121,7 +121,7 @@ const waterParks: Water[] = [
         type: 'Water Park',
         name: 'Mountain Splash Park',
         location: 'Swiss Alps',
-        price: 850,
+        price: 1,
         rating: 4.8,
         image: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800&q=80',
         images: [

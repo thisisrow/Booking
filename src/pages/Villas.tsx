@@ -26,7 +26,7 @@ export default function Villas() {
                 </div>
               </div>
               <div className="flex justify-between items-center">
-                <p className="text-xl font-bold">₹{villa.price}/night</p>
+                <p className="text-xl font-bold">₹{villa.price}/day</p>
                 <button
                   onClick={() => window.location.href = `/booking/${villa.id}`}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"

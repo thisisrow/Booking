@@ -37,7 +37,7 @@ export default function Home() {
       {
         name: "palgharcity48",
         handle: "@palgharcity48",
-        stats: "261 posts • 16.2K followers • 320 following",
+        stats: "261 posts • 3.2K followers • 320 following",
         url: "https://www.instagram.com/palgharcity48/",
         image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg",
         verified: true

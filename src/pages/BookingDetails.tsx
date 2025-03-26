@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Calendar, Users, Baby, Car } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,7 +7,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useWater } from '../context/WaterContext';
-const RAZORPAY_KEY_ID = 'rzp_test_uupDDxDobiy5a4';
+const RAZORPAY_KEY_ID = import.meta.env.VITE_RAZORPAY_KEY_ID;
+const RAZORPAY_KEY_SECRET = import.meta.env.VITE_RAZORPAY_KEY_SECRET;
 
 export default function BookingDetails() {
   const { id } = useParams();
@@ -33,16 +34,16 @@ export default function BookingDetails() {
       alert('Please fill in all required fields and accept terms & conditions');
       return;
     }
-
+  
     const options = {
-      key: RAZORPAY_KEY_ID,
-      amount: totalPrice * 100, // Amount in paise
+      key: RAZORPAY_KEY_ID, // Public Key
+      key_secret: RAZORPAY_KEY_SECRET, // Secret Key (Not Secure)
+      amount: totalPrice * 100, // Convert to paise
       currency: "INR",
       name: "palgharcity48",
       description: `Booking for ${place?.name}`,
       handler: function(response: any) {
         alert('Payment Successful! Payment ID: ' + response.razorpay_payment_id);
-        // Here you would typically make an API call to your backend to verify and record the payment
       },
       prefill: {
         name: name,
@@ -59,7 +60,7 @@ export default function BookingDetails() {
         color: "#2563eb"
       }
     };
-
+  
     const razorpay = new (window as any).Razorpay(options);
     razorpay.open();
   };
