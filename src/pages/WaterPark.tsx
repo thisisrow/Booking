@@ -8,9 +8,11 @@ export default function WaterPark() {
       <h1 className="text-3xl font-bold mb-8">Water Park</h1>
       <div className="grid md:grid-cols-3 gap-8">
         {waterParks.map((waterPark) => (
-          <TiltCard>
+          
           <div key={waterPark.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <TiltCard>
             <img loading="lazy" src={waterPark.image} alt={waterPark.name} className="w-full h-48 object-cover" />
+            </TiltCard>
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -36,7 +38,6 @@ export default function WaterPark() {
               </div>
             </div>
           </div>
-          </TiltCard>
         ))}
       </div>
     </div>

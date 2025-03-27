@@ -8,9 +8,11 @@ export default function Villas() {
       <h1 className="text-3xl font-bold mb-8">Luxury Villas</h1>
       <div className="grid md:grid-cols-3 gap-8">
         {villas.map((villa) => (
-          <TiltCard>
+          
           <div key={villa.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <img loading="lazy" src={villa.image} alt={villa.name} className="w-full h-48 object-cover" />
+            <TiltCard>
+              <img loading="lazy" src={villa.image} alt={villa.name} className="w-full h-48 object-cover" />
+            </TiltCard>
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -36,7 +38,7 @@ export default function Villas() {
               </div>
             </div>
           </div>
-          </TiltCard>
+          
         ))}
       </div>
     </div>
