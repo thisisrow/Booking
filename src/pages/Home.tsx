@@ -1,4 +1,4 @@
-import { Send, Youtube, Instagram, CheckCircle } from 'lucide-react';
+import { Send, Youtube, Instagram, CheckCircle,Facebook } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import SocialFeed from '../components/SocialFeed';
 import 'swiper/css';
@@ -103,7 +103,7 @@ export default function Home() {
               <a
                 href="https://www.instagram.com/palgharcity48/"
                 target="_blank"
-                className="flex items-center space-x-2 bg-gradient-to-br from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-300"
+                className="flex items-center space-x-2 bg-gradient-to-br from-pink-600 to-purple-700 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-300"
               >
                 <Instagram className="w-5 h-5" />
                 <span>Instagram</span>
@@ -115,6 +115,14 @@ export default function Home() {
               >
                 <Youtube className="w-5 h-5" />
                 <span>YouTube</span>
+              </a>
+              <a
+                href="https://www.facebook.com/share/18iVDrZZsC/?mibextid=wwXIfr"
+                target="_blank"
+                className="flex items-center space-x-2 bg-gradient-to-br from-red-500 to-blue-700 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-300"
+              >
+                <Facebook className="w-5 h-5" />
+                <span>Facebook</span>
               </a>
             </div>
           </div>
