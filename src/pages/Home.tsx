@@ -90,7 +90,7 @@ export default function Home() {
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <source src="https://res.cloudinary.com/db1nsxnit/video/upload/v1737296756/samples/sea-turtle.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/db1nsxnit/video/upload/v1743250074/bg_dcycxi.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black bg-opacity-50" />
         </div>

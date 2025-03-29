@@ -1,9 +1,9 @@
-import { Award, Users, Globe, Shield, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Award, Users, Globe, Shield, Twitter, Instagram, Linkedin ,Github} from 'lucide-react';
 const team = [
   {
     name: "Sachin Vishwakarma",
     role: "Founder & CEO",
-    image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg",
+    image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1742933072/srvsachinn_dqddin.jpg",
     social: {
       instagram: "https://www.instagram.com/palgharcity48/",
       twitter: "https://twitter.com/palgharcity48",
@@ -11,9 +11,9 @@ const team = [
     }
   },
   {
-    name: "John Doe",
-    role: "Marketing Director",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    name: "Prathamesh Mishra",
+    role: "Techinical Manager",
+    image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1743250919/profilel_ojao53.png",
     social: {
       instagram: "#",
       twitter: "#",
@@ -25,9 +25,9 @@ const team = [
     role: "Operations Manager",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
     social: {
-      instagram: "#",
-      twitter: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/prathameshm101/",
+      twitter: "https://github.com/thisisrow",
+      linkedin: "https://www.linkedin.com/in/prathamesh-mishra-a83357260/"
     }
   }
 ];
