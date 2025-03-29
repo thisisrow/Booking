@@ -13,7 +13,7 @@ const team = [
   {
     name: "Prathamesh Mishra",
     role: "Techinical Manager",
-    image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1743251349/pro_yp4gca.jpg",
+    image: "https://res.cloudinary.com/db1nsxnit/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1743251988/profilel_zqa4ac.png",
     social: {
       instagram: "#",
       twitter: "#",
