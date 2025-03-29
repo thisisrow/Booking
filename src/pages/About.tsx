@@ -1,4 +1,4 @@
-import { Award, Users, Globe, Shield, Twitter, Instagram, Linkedin ,Github} from 'lucide-react';
+import { Award, Users, Globe, Shield, Twitter, Instagram, Linkedin } from 'lucide-react';
 const team = [
   {
     name: "Sachin Vishwakarma",
@@ -13,7 +13,7 @@ const team = [
   {
     name: "Prathamesh Mishra",
     role: "Techinical Manager",
-    image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1743250919/profilel_ojao53.png",
+    image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1743251349/pro_yp4gca.jpg",
     social: {
       instagram: "#",
       twitter: "#",
