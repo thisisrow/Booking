@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Calendar, Users, Baby, Car } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';

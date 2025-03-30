@@ -19,21 +19,27 @@ export default function Contact() {
                 <Phone className="w-6 h-6 text-blue-600 mr-3" />
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">
+                    <a href="tel:+916394031815" className="hover:underline">
+                      +91 6394 031815
+                    </a>
+                    </p>
                 </div>
               </div>
               <div className="flex items-center">
                 <Mail className="w-6 h-6 text-blue-600 mr-3" />
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-gray-600">support@palgharcity48.com</p>
+                  <p className="text-gray-600">
+                  sachinvishwakarma332@gmail.com
+                  </p>
                 </div>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-6 h-6 text-blue-600 mr-3" />
                 <div>
                   <p className="font-semibold">Address</p>
-                  <p className="text-gray-600">123 Luxury Avenue, Paradise City</p>
+                  <p className="text-gray-600">Palghar West</p>
                 </div>
               </div>
             </div>
