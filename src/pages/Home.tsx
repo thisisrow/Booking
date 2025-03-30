@@ -1,4 +1,3 @@
-import { Send} from 'lucide-react';
 import Hero from './Home/Hero'
 import SocialFeed from '../components/SocialFeed';
 import SocialGrid from './Home/SocialGrid';
