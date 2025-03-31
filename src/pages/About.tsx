@@ -19,16 +19,6 @@ const team = [
       twitter: "#",
       linkedin: "#"
     }
-  },
-  {
-    name: "Jane Smith",
-    role: "Operations Manager",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    social: {
-      instagram: "https://www.instagram.com/prathameshm101/",
-      twitter: "https://github.com/thisisrow",
-      linkedin: "https://www.linkedin.com/in/prathamesh-mishra-a83357260/"
-    }
   }
 ];
 export default function About() {
