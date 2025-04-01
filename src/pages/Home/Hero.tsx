@@ -1,5 +1,6 @@
-import { Youtube, Instagram,Facebook } from 'lucide-react';
+import { Youtube, Instagram, Facebook } from 'lucide-react';
 import { useState, useEffect } from 'react';
+
 const Hero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
@@ -14,7 +15,7 @@ const Hero = () => {
 
   return (
     <>
-    <section className="relative h-[600px]">
+      <section className="relative h-[600px]">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1800&q=80"
@@ -40,9 +41,13 @@ const Hero = () => {
         <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-xl">
             <h1 className="text-5xl font-bold mb-6">Welcome to PalgharCity48</h1>
-            <p className="text-lg italic">- by <span className="font-semibold">Sachin Vishwakarma</span></p>
-            <p className="text-xl mb-8">"Experience the thrill and excitement at our world-class water parks!"</p>
-            <div className="flex space-x-4">
+            <p className="text-lg italic">
+              - by <span className="font-semibold">Sachin Vishwakarma</span>
+            </p>
+            <p className="text-xl mb-8">
+              "Experience the thrill and excitement at our world-class water parks!"
+            </p>
+            <div className="flex flex-wrap space-x-4 space-y-2 sm:space-y-0">
               <a
                 href="https://www.instagram.com/palgharcity48/"
                 target="_blank"
@@ -72,7 +77,7 @@ const Hero = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
