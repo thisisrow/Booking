@@ -106,9 +106,13 @@ import { useState, useEffect } from 'react';
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Castle className="w-8 h-8 text-blue-600" />
+              <img
+              src="https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg"
+              alt="Logo"
+              className="w-8 h-8 rounded-full"
+              />
               <span className="ml-2 text-xl font-bold text-gray-800">palgharcity48</span>
-             </Link>
+            </Link>
            </div>
            <div className="hidden md:flex items-center space-x-1">
              {navItems.map((item) => (
