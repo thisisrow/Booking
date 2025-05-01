@@ -1,4 +1,4 @@
-import { Settings, Grid, Video, PenSquare as PersonSquare } from 'lucide-react';
+import { Settings, Play,Grid, Video, PenSquare as PersonSquare } from 'lucide-react';
 import { useState } from 'react';
 
 const posts = [
@@ -130,15 +130,18 @@ export default function SocialFeed() {
         />
       </div>
 
-      {/* Optional overlay for contrast */}
+      {/* Play Icon Overlay */}
+      <div className="absolute inset-0 z-20 flex items-center justify-center">
+        <div className="bg-black/50 p-3 rounded-full">
+          <Play className="w-8 h-8 text-white" />
+        </div>
+      </div>
+
+      {/* Optional dim background */}
       <div className="absolute inset-0 bg-black/10 z-0" />
     </div>
   ))}
 </div>
-
-
-
-
         {/* Fullscreen Video Modal */}
         {activeVideo && (
           <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
