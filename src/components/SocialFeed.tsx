@@ -103,21 +103,41 @@ export default function SocialFeed() {
 
         {/* Instagram Video Grid */}
         <div className="grid grid-cols-3 gap-4 mb-8">
-          {posts.map((post) => (
-            <div
-              key={post.id}
-              className="aspect-[9/16] overflow-hidden rounded-xl shadow-md cursor-pointer"
-              onClick={() => setActiveVideo(post.videoUrl)}
-            >
-              <video
-                src={post.videoUrl}
-                className="w-full h-full object-cover"
-                muted
-                playsInline
-              />
-            </div>
-          ))}
-        </div>
+  {posts.map((post) => (
+    <div
+      key={post.id}
+      className="relative aspect-[3/4] overflow-hidden rounded-xl shadow-md cursor-pointer"
+      onClick={() => setActiveVideo(post.videoUrl)}
+    >
+      {/* Blurred Background Video */}
+      <video
+        src={post.videoUrl}
+        className="absolute inset-0 w-full h-full object-cover blur-lg scale-110"
+        muted
+        playsInline
+        autoPlay
+        loop
+        aria-hidden="true"
+      />
+
+      {/* Foreground Video */}
+      <div className="relative z-10 flex items-center justify-center w-full h-full">
+        <video
+          src={post.videoUrl}
+          className="w-full h-full object-contain"
+          muted
+          playsInline
+        />
+      </div>
+
+      {/* Optional overlay for contrast */}
+      <div className="absolute inset-0 bg-black/10 z-0" />
+    </div>
+  ))}
+</div>
+
+
+
 
         {/* Fullscreen Video Modal */}
         {activeVideo && (

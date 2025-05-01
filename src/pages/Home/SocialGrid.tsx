@@ -61,7 +61,6 @@ const SocialGrid = () => {
     <Youtube className="w-6 h-6 text-red-600 mr-2" />
     YouTube Channels
   </h3>
-  {/* 2 columns on mobile (default), adjusts for larger screens too */}
   <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
     {socialAccounts.youtube.map((channel, index) => (
       <a
