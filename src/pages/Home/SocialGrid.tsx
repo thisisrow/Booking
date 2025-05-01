@@ -22,7 +22,7 @@ const SocialGrid = () => {
           {
             name: "palgharcity48",
             handle: "@palgharcity48",
-            stats: "261 posts • 3.2K followers • 320 following",
+            stats: "289 posts • 18.1K followers • 356 following",
             url: "https://www.instagram.com/palgharcity48/",
             image: "https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg",
             verified: true
@@ -57,34 +57,34 @@ const SocialGrid = () => {
 
         {/* YouTube Channels */}
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6 flex items-center">
-            <Youtube className="w-6 h-6 text-red-600 mr-2" />
-            YouTube Channels
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {socialAccounts.youtube.map((channel, index) => (
-              <a
-                key={index}
-                href={channel.url}
-                target="_blank"
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
-              >
-                <div className="flex items-center p-6">
-                  <img
-                    src={channel.image}
-                    alt={channel.name}
-                    className="w-16 h-16 rounded-full object-cover"
-                  />
-                  <div className="ml-4">
-                    <h4 className="font-semibold">{channel.name}</h4>
-                    <p className="text-gray-600 text-sm">{channel.handle}</p>
-                    <p className="text-gray-500 text-sm">{channel.stats}</p>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+  <h3 className="text-2xl font-semibold mb-6 flex items-center">
+    <Youtube className="w-6 h-6 text-red-600 mr-2" />
+    YouTube Channels
+  </h3>
+  {/* 2 columns on mobile (default), adjusts for larger screens too */}
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    {socialAccounts.youtube.map((channel, index) => (
+      <a
+        key={index}
+        href={channel.url}
+        target="_blank"
+        className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+      >
+        <div className="flex flex-col items-center p-4 text-center">
+          <img
+            src={channel.image}
+            alt={channel.name}
+            className="w-16 h-16 rounded-full object-cover mb-2"
+          />
+          <h4 className="font-semibold text-sm">{channel.name}</h4>
+          <p className="text-gray-600 text-xs">{channel.handle}</p>
+          <p className="text-gray-500 text-xs">{channel.stats}</p>
         </div>
+      </a>
+    ))}
+  </div>
+</div>
+
 
         {/* Instagram Accounts */}
         <div>
@@ -92,7 +92,7 @@ const SocialGrid = () => {
             <Instagram className="w-6 h-6 text-pink-600 mr-2" />
             Instagram Accounts
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialAccounts.instagram.map((account, index) => (
               <a
                 key={index}

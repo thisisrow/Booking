@@ -90,15 +90,15 @@ export default function SocialFeed() {
 
               <div className="flex gap-8">
                 <div className="text-sm">
-                  <span className="font-semibold">763</span>
+                  <span className="font-semibold">289</span>
                   <span className="text-gray-500 ml-1">posts</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold">3.2M</span>
+                  <span className="font-semibold">18.1K</span>
                   <span className="text-gray-500 ml-1">followers</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold">1.6K</span>
+                  <span className="font-semibold">289</span>
                   <span className="text-gray-500 ml-1">following</span>
                 </div>
               </div>
@@ -153,57 +153,6 @@ export default function SocialFeed() {
             </div>
           ))}
         </div>
-
-        {/* Featured Post */}
-        <div className="mt-16 border border-gray-200 rounded-lg max-w-[470px] mx-auto overflow-hidden">
-          <div className="p-3 flex items-center justify-between border-b">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full overflow-hidden border">
-                <img loading="lazy"
-                  src="https://images.unsplash.com/photo-1611695434398-4f4b330623e6?w=150&h=150&fit=crop"
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="font-semibold text-sm">palgharcity48</span>
-            </div>
-            <MoreHorizontal className="w-5 h-5 text-gray-700 cursor-pointer" />
-          </div>
-
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=600&fit=crop"
-            alt="Featured post"
-            className="w-full aspect-square object-cover"
-          />
-
-          <div className="p-3">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-4">
-                <Heart className="w-6 h-6 cursor-pointer hover:text-red-500 transition-colors" />
-                <MessageCircle className="w-6 h-6 cursor-pointer hover:text-gray-600 transition-colors" />
-                <Send className="w-6 h-6 cursor-pointer hover:text-gray-600 transition-colors" />
-              </div>
-              <Bookmark className="w-6 h-6 cursor-pointer hover:text-gray-600 transition-colors" />
-            </div>
-
-            <div className="mb-2">
-              <span className="font-semibold text-sm">156,547 likes</span>
-            </div>
-
-            <div className="text-sm">
-              <span className="font-semibold">palgharcity48</span>
-              <span className="ml-2">Experience luxury like never before at our exclusive mountain retreat ⛰️✨</span>
-            </div>
-
-            <button className="text-gray-500 text-xs mt-1 hover:text-gray-900">
-              View all 2,453 comments
-            </button>
-
-            <div className="text-gray-400 text-[10px] uppercase mt-1">
-              2 days ago
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* YouTube Videos */}
@@ -215,7 +164,7 @@ export default function SocialFeed() {
           {/* Video 1 */}
           <div className="aspect-w-16 aspect-h-9">
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz" 
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -225,7 +174,7 @@ export default function SocialFeed() {
           {/* Video 2 */}
           <div className="aspect-w-16 aspect-h-9">
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz" 
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -235,7 +184,7 @@ export default function SocialFeed() {
           {/* Video 3 */}
           <div className="aspect-w-16 aspect-h-9">
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz" 
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -245,7 +194,7 @@ export default function SocialFeed() {
           {/* Video 4 */}
           <div className="aspect-w-16 aspect-h-9">
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz" 
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
