@@ -13,148 +13,437 @@ export type TourismSpot = {
   coordinates: string;
   about: string;
   attractions: string[];
+  category: 'Fort' | 'Waterfall' | 'Tourist Attraction';
 };
 
 // Tourism data
 const tourismSpots: TourismSpot[] = [
-    {
-        id: 1,
-        name: 'Taj Mahal',
-        location: 'Agra, India',
-        description: 'An ivory-white marble mausoleum on the right bank of the river Yamuna.',
-        image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&q=80',
-            'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80',
-            'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?w=800&q=80'
-        ],
-        bestTime: 'October to March',
-        weather: 'Tropical with hot summers and mild winters',
-        coordinates: '27.1751° N, 78.0421° E',
-        about: 'The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra, India. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal.',
-        attractions: [
-            'Main Mausoleum',
-            'Mosque and Jawab',
-            'Mughal Gardens',
-            'Yamuna River View'
-        ]
-    },
-    {
-        id: 2,
-        name: 'Eiffel Tower',
-        location: 'Paris, France',
-        description: 'A wrought-iron lattice tower on the Champ de Mars.',
-        image: 'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&q=80',
-            'https://images.unsplash.com/photo-1502602898650-2c3013771132?w=800&q=80',
-            'https://images.unsplash.com/photo-1541552560-2d47a8f2e8b8?w=800&q=80'
-        ],
-        bestTime: 'April to June, September to October',
-        weather: 'Temperate with mild summers and cool winters',
-        coordinates: '48.8584° N, 2.2945° E',
-        about: 'The Eiffel Tower is a historic landmark in Paris, built by Gustave Eiffel\'s company for the 1889 World\'s Fair. It stands as a global symbol of France and romance.',
-        attractions: [
-            'Observation Decks',
-            'Champ de Mars Park',
-            'Seine River Views',
-            'Nighttime Light Show'
-        ]
-    },
-    {
-        id: 3,
-        name: 'Great Wall of China',
-        location: 'Northern China',
-        description: 'A series of fortifications made of stone, brick, and other materials.',
-        image: 'https://images.unsplash.com/photo-1589371785581-2e7eecf79309?w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1589371785581-2e7eecf79309?w=800&q=80',
-            'https://images.unsplash.com/photo-1500829246861-2f0b32c0d9d9?w=800&q=80',
-            'https://images.unsplash.com/photo-1602632001978-9c867c247307?w=800&q=80'
-        ],
-        bestTime: 'April to May, September to October',
-        weather: 'Continental with cold winters and hot summers',
-        coordinates: '40.4319° N, 116.5704° E',
-        about: 'The Great Wall of China is a historic series of walls and fortifications built to protect Chinese states from various invaders, particularly the Mongols, starting in the 7th century BC.',
-        attractions: [
-            'Mutianyu Section',
-            'Badaling Section',
-            'Watchtowers',
-            'Mountain Views'
-        ]
-    },
-    {
-        id: 4,
-        name: 'Great Barrier Reef',
-        location: 'Queensland, Australia',
-        description: 'The worlds largest coral reef system, visible from outer space.',
-        image: 'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=800&q=80',
-            'https://images.unsplash.com/photo-1621863523183-5e7d513dd612?w=800&q=80',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80'
-        ],
-        bestTime: 'June to November',
-        weather: 'Tropical with wet and dry seasons',
-        coordinates: '18.2871° S, 147.6992° E',
-        about: 'The Great Barrier Reef is the world\'s largest coral reef system, stretching over 2,300 kilometers off the coast of Queensland, Australia. It\'s a UNESCO World Heritage site and home to thousands of marine species.',
-        attractions: [
-            'Coral Cayes',
-            'Reef Diving and Snorkeling',
-            'Whitsunday Islands',
-            'Marine Wildlife Viewing'
-        ]
-    },
-    {
-        id: 5,
-        name: 'Northern Lights',
-        location: 'Iceland',
-        description: 'Natural light display in the Earth sky, predominantly seen in high-latitude regions.',
-        image: 'https://images.unsplash.com/photo-1579033461380-adb47c3eb938?w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1579033461380-adb47c3eb938?w=800&q=80',
-            'https://images.unsplash.com/photo-1602015792182-7d4b4a3b5d68?w=800&q=80',
-            'https://images.unsplash.com/photo-1611929086329-3d0a8b77e381?w=800&q=80'
-        ],
-        bestTime: 'September to April',
-        weather: 'Cold with long winters and short summers',
-        coordinates: '64.9631° N, 19.0208° W',
-        about: 'The Northern Lights, or Aurora Borealis, are a natural phenomenon caused by charged particles from the sun hitting gases in Earth\'s atmosphere. Iceland is one of the best places to witness this dazzling display.',
-        attractions: [
-            'Thingvellir National Park',
-            'Jökulsárlón Glacier Lagoon',
-            'Reykjavik Viewing Spots',
-            'Golden Circle Route'
-        ]
-    },
-    {
-        id: 6,
-        name: 'Venice',
-        location: 'Veneto, Italy',
-        description: 'Famous for its canals, Gothic architecture, and traditional gondolas.',
-        image: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
-            'https://images.unsplash.com/photo-1537572263231-4314a30d444f?w=800&q=80',
-            'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=800&q=80'
-        ],
-        bestTime: 'April to June, September to October',
-        weather: 'Humid subtropical with hot summers and cool winters',
-        coordinates: '45.4408° N, 12.3155° E',
-        about: 'Venice is a city built on a lagoon in northeastern Italy, renowned for its unique canal system, historic architecture, and cultural heritage. It\'s a UNESCO World Heritage site famous for its art and history.',
-        attractions: [
-            'Grand Canal',
-            'St. Mark\'s Basilica',
-            'Doge\'s Palace',
-            'Rialto Bridge'
-        ]
-    },
+  // Forts
+  {
+    "id": 1,
+    "name": "Shirgaon Fort",
+    "location": "Shirgaon, Palghar",
+    "description": "Historic coastal fort with panoramic sea views",
+    "image": "https://images.pexels.com/photos/2832034/pexels-photo-2832034.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832034/pexels-photo-2832034.jpeg",
+      "https://images.pexels.com/photos/2832035/pexels-photo-2832035.jpeg",
+      "https://images.pexels.com/photos/2832036/pexels-photo-2832036.jpeg"
+    ],
+    "bestTime": "October to February",
+    "weather": "Moderate climate with pleasant winters",
+    "coordinates": "19.7000° N, 72.7000° E",
+    "about": "Shirgaon Fort is a historic coastal fortification that offers stunning views of the Arabian Sea. Built in the 16th century, it served as an important defensive structure.",
+    "attractions": ["Sea View Point", "Ancient Architecture", "Watch Towers", "Temple Ruins"],
+    "category": "Fort"
+  },
+  {
+    "id": 2,
+    "name": "Bhavangad Fort",
+    "location": "Palghar District",
+    "description": "Ancient hill fort with rich history",
+    "image": "https://images.pexels.com/photos/2832037/pexels-photo-2832037.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832037/pexels-photo-2832037.jpeg",
+      "https://images.pexels.com/photos/2832038/pexels-photo-2832038.jpeg",
+      "https://images.pexels.com/photos/2832039/pexels-photo-2832039.jpeg"
+    ],
+    "bestTime": "November to February",
+    "weather": "Cool and pleasant during winter",
+    "coordinates": "19.6500° N, 72.7500° E",
+    "about": "Bhavangad Fort is a historic hill fort known for its strategic location and architectural beauty.",
+    "attractions": ["Ancient Temple", "Water Cisterns", "Fortification Walls", "Scenic Views"],
+    "category": "Fort"
+  },
+  {
+    "id": 3,
+    "name": "Kelve Fort",
+    "location": "Kelve, Palghar",
+    "description": "A fort overlooking the Arabian Sea",
+    "image": "https://images.pexels.com/photos/2832040/pexels-photo-2832040.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832040/pexels-photo-2832040.jpeg",
+      "https://images.pexels.com/photos/2832041/pexels-photo-2832041.jpeg",
+      "https://images.pexels.com/photos/2832042/pexels-photo-2832042.jpeg"
+    ],
+    "bestTime": "November to March",
+    "weather": "Pleasant with cool sea breeze",
+    "coordinates": "19.7000° N, 72.8000° E",
+    "about": "Kelve Fort is a coastal fort that offers scenic views of the Arabian Sea, popular for its historical significance and peaceful atmosphere.",
+    "attractions": ["Sea View", "Historical Ruins", "Beach", "Trekking"],
+    "category": "Fort"
+  },
+  {
+    "id": 4,
+    "name": "Kaldurg Fort",
+    "location": "Near Palghar, Maharashtra",
+    "description": "A hill fort known for its panoramic views",
+    "image": "https://images.pexels.com/photos/2832043/pexels-photo-2832043.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832043/pexels-photo-2832043.jpeg",
+      "https://images.pexels.com/photos/2832044/pexels-photo-2832044.jpeg",
+      "https://images.pexels.com/photos/2832045/pexels-photo-2832045.jpeg"
+    ],
+    "bestTime": "October to March",
+    "weather": "Moderate temperature with clear skies",
+    "coordinates": "19.6800° N, 72.7600° E",
+    "about": "Kaldurg Fort is a hill fort with expansive views, popular for hiking and its fortification ruins.",
+    "attractions": ["Fort Ruins", "Scenic View", "Trekking Trail"],
+    "category": "Fort"
+  },
+  {
+    "id": 5,
+    "name": "Asava Fort",
+    "location": "Near Palghar, Maharashtra",
+    "description": "A lesser-known fort with significant history",
+    "image": "https://images.pexels.com/photos/2832046/pexels-photo-2832046.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832046/pexels-photo-2832046.jpeg",
+      "https://images.pexels.com/photos/2832047/pexels-photo-2832047.jpeg",
+      "https://images.pexels.com/photos/2832048/pexels-photo-2832048.jpeg"
+    ],
+    "bestTime": "November to February",
+    "weather": "Pleasant and cool",
+    "coordinates": "19.7000° N, 72.7800° E",
+    "about": "Asava Fort is an ancient fort offering a peaceful escape with its rich historical past and panoramic views.",
+    "attractions": ["Old Ruins", "Hiking", "Viewpoint"],
+    "category": "Fort"
+  },
+  {
+    "id": 6,
+    "name": "Mahim Fort",
+    "location": "Mahim, Mumbai",
+    "description": "A coastal fort with a view of the Arabian Sea",
+    "image": "https://images.pexels.com/photos/2832049/pexels-photo-2832049.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832049/pexels-photo-2832049.jpeg",
+      "https://images.pexels.com/photos/2832050/pexels-photo-2832050.jpeg",
+      "https://images.pexels.com/photos/2832051/pexels-photo-2832051.jpeg"
+    ],
+    "bestTime": "October to February",
+    "weather": "Tropical climate with warm winters",
+    "coordinates": "19.0500° N, 72.8500° E",
+    "about": "Mahim Fort was built by the Portuguese to defend the region and offers a glimpse into the colonial past.",
+    "attractions": ["Historical Fortifications", "Sea Views", "Walkable Areas"],
+    "category": "Fort"
+  },
+  {
+    "id": 7,
+    "name": "Kohoj Fort",
+    "location": "Palghar District, Maharashtra",
+    "description": "A beautiful hill fort with trekking opportunities",
+    "image": "https://images.pexels.com/photos/2832052/pexels-photo-2832052.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832052/pexels-photo-2832052.jpeg",
+      "https://images.pexels.com/photos/2832053/pexels-photo-2832053.jpeg",
+      "https://images.pexels.com/photos/2832054/pexels-photo-2832054.jpeg"
+    ],
+    "bestTime": "October to March",
+    "weather": "Cool and windy during winters",
+    "coordinates": "19.6000° N, 72.7000° E",
+    "about": "Kohoj Fort is a hill fort located amidst lush green surroundings, ideal for trekking and history enthusiasts.",
+    "attractions": ["Trekking", "Fort Ruins", "Scenic Views"],
+    "category": "Fort"
+  },
+  {
+    "id": 8,
+    "name": "Asherigad Fort",
+    "location": "Near Palghar, Maharashtra",
+    "description": "A beautiful fort surrounded by nature",
+    "image": "https://images.pexels.com/photos/2832055/pexels-photo-2832055.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832055/pexels-photo-2832055.jpeg",
+      "https://images.pexels.com/photos/2832056/pexels-photo-2832056.jpeg",
+      "https://images.pexels.com/photos/2832057/pexels-photo-2832057.jpeg"
+    ],
+    "bestTime": "November to February",
+    "weather": "Moderate climate with cool temperatures",
+    "coordinates": "19.7500° N, 72.7600° E",
+    "about": "Asherigad Fort is a serene fort located amidst dense forests, perfect for nature lovers and history buffs.",
+    "attractions": ["Scenic Views", "Fort Ruins", "Nature Trails"],
+    "category": "Fort"
+  },
+  // Waterfalls
+  {
+    "id": 9,
+    "name": "Waghoba Waterfall",
+    "location": "Palghar District",
+    "description": "Scenic waterfall surrounded by lush greenery",
+    "image": "https://images.pexels.com/photos/2832040/pexels-photo-2832040.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832040/pexels-photo-2832040.jpeg",
+      "https://images.pexels.com/photos/2832041/pexels-photo-2832041.jpeg",
+      "https://images.pexels.com/photos/2832042/pexels-photo-2832042.jpeg"
+    ],
+    "bestTime": "July to September",
+    "weather": "Monsoon season with heavy rainfall",
+    "coordinates": "19.7200° N, 72.7800° E",
+    "about": "Waghoba Waterfall is a beautiful natural cascade that comes alive during the monsoon season.",
+    "attractions": ["Waterfall View Point", "Trekking Trails", "Photography Spots", "Picnic Areas"],
+    "category": "Waterfall"
+  },
+  {
+    "id": 10,
+    "name": "Dabhosa Waterfall",
+    "location": "Palghar District",
+    "description": "Magnificent waterfall with natural pool",
+    "image": "https://images.pexels.com/photos/2832043/pexels-photo-2832043.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832043/pexels-photo-2832043.jpeg",
+      "https://images.pexels.com/photos/2832044/pexels-photo-2832044.jpeg",
+      "https://images.pexels.com/photos/2832045/pexels-photo-2832045.jpeg"
+    ],
+    "bestTime": "July to October",
+    "weather": "Monsoon and post-monsoon season",
+    "coordinates": "19.8000° N, 72.8000° E",
+    "about": "Dabhosa Waterfall is one of the most popular waterfalls in Palghar, known for its natural swimming pool and scenic beauty.",
+    "attractions": ["Natural Pool", "Hiking Trails", "Bird Watching", "Cave Exploration"],
+    "category": "Waterfall"
+  },
+  {
+    "id": 11,
+    "name": "Dhodhadi Waterfall (Padghe Waterfall)",
+    "location": "Padghe, Palghar",
+    "description": "A hidden gem surrounded by dense forest",
+    "image": "https://images.pexels.com/photos/2832046/pexels-photo-2832046.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832046/pexels-photo-2832046.jpeg",
+      "https://images.pexels.com/photos/2832047/pexels-photo-2832047.jpeg",
+      "https://images.pexels.com/photos/2832048/pexels-photo-2832048.jpeg"
+    ],
+    "bestTime": "June to September",
+    "weather": "Heavy monsoon rainfall",
+    "coordinates": "19.6500° N, 72.7100° E",
+    "about": "Dhodhadi Waterfall, also known as Padghe Waterfall, is tucked away in a dense forest and comes alive during the monsoon season.",
+    "attractions": ["Secluded Waterfall", "Trekking", "Bird Watching", "Photography"],
+    "category": "Waterfall"
+  },
+  {
+    "id": 12,
+    "name": "Sagave Waterfall",
+    "location": "Sagave, Palghar",
+    "description": "A peaceful waterfall surrounded by lush vegetation",
+    "image": "https://images.pexels.com/photos/2832049/pexels-photo-2832049.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832049/pexels-photo-2832049.jpeg",
+      "https://images.pexels.com/photos/2832050/pexels-photo-2832050.jpeg",
+      "https://images.pexels.com/photos/2832051/pexels-photo-2832051.jpeg"
+    ],
+    "bestTime": "June to September",
+    "weather": "Monsoon season with heavy rainfall",
+    "coordinates": "19.6000° N, 72.7400° E",
+    "about": "Sagave Waterfall is a tranquil destination offering a calm escape amidst nature’s beauty, especially during the monsoons.",
+    "attractions": ["Waterfall", "Nature Walks", "Photography", "Picnic Areas"],
+    "category": "Waterfall"
+  },
+  {
+    "id": 13,
+    "name": "Tandulwadi Waterfall",
+    "location": "Tandulwadi, Palghar",
+    "description": "A hidden waterfall amidst the forests",
+    "image": "https://images.pexels.com/photos/2832052/pexels-photo-2832052.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832052/pexels-photo-2832052.jpeg",
+      "https://images.pexels.com/photos/2832053/pexels-photo-2832053.jpeg",
+      "https://images.pexels.com/photos/2832054/pexels-photo-2832054.jpeg"
+    ],
+    "bestTime": "June to September",
+    "weather": "Monsoon season",
+    "coordinates": "19.5500° N, 72.7600° E",
+    "about": "Tandulwadi Waterfall is a peaceful and less crowded waterfall, ideal for nature lovers looking to explore hidden gems.",
+    "attractions": ["Secluded Waterfall", "Trekking", "Photography", "Picnicking"],
+    "category": "Waterfall"
+  },
+  {
+    "id": 14,
+    "name": "Kalmandavi Waterfall",
+    "location": "Near Palghar, Maharashtra",
+    "description": "Majestic waterfall surrounded by dense forests",
+    "image": "https://images.pexels.com/photos/2832055/pexels-photo-2832055.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832055/pexels-photo-2832055.jpeg",
+      "https://images.pexels.com/photos/2832056/pexels-photo-2832056.jpeg",
+      "https://images.pexels.com/photos/2832057/pexels-photo-2832057.jpeg"
+    ],
+    "bestTime": "June to September",
+    "weather": "Monsoon with heavy rainfall",
+    "coordinates": "19.5800° N, 72.7200° E",
+    "about": "Kalmandavi Waterfall is a stunning waterfall, particularly captivating during the monsoon season, surrounded by lush forests.",
+    "attractions": ["Waterfall", "Trekking Trails", "Photography", "Nature Walks"],
+    "category": "Waterfall"
+  },
+  // Tourist Attractions
+  {
+    "id": 15,
+    "name": "Kelve Beach",
+    "location": "Kelve, Palghar",
+    "description": "Pristine beach with golden sand",
+    "image": "https://images.pexels.com/photos/2832046/pexels-photo-2832046.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832046/pexels-photo-2832046.jpeg",
+      "https://images.pexels.com/photos/2832047/pexels-photo-2832047.jpeg",
+      "https://images.pexels.com/photos/2832048/pexels-photo-2832048.jpeg"
+    ],
+    "bestTime": "October to March",
+    "weather": "Pleasant with moderate temperatures",
+    "coordinates": "19.6000° N, 72.7300° E",
+    "about": "Kelve Beach is known for its clean shoreline, golden sand, and peaceful atmosphere.",
+    "attractions": ["Sunset Point", "Beach Activities", "Local Food Stalls", "Historic Temple"],
+    "category": "Tourist Attraction"
+  },
+  {
+    "id": 16,
+    "name": "Tembhi Beach (Mahim Beach)",
+    "location": "Mahim, Palghar",
+    "description": "A serene beach perfect for relaxation",
+    "image": "https://images.pexels.com/photos/2832058/pexels-photo-2832058.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832058/pexels-photo-2832058.jpeg",
+      "https://images.pexels.com/photos/2832059/pexels-photo-2832059.jpeg",
+      "https://images.pexels.com/photos/2832060/pexels-photo-2832060.jpeg"
+    ],
+    "bestTime": "November to February",
+    "weather": "Mild winters",
+    "coordinates": "19.6500° N, 72.7100° E",
+    "about": "Tembhi Beach is a quiet beach where visitors can enjoy peaceful walks and scenic views.",
+    "attractions": ["Quiet Beach", "Sunbathing", "Scenic Views", "Local Food"],
+    "category": "Tourist Attraction"
+  },
+  {
+    "id": 17,
+    "name": "Shirgaon Beach",
+    "location": "Shirgaon, Palghar",
+    "description": "A serene beach with clear waters and golden sand",
+    "image": "https://images.pexels.com/photos/2832061/pexels-photo-2832061.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832061/pexels-photo-2832061.jpeg",
+      "https://images.pexels.com/photos/2832062/pexels-photo-2832062.jpeg",
+      "https://images.pexels.com/photos/2832063/pexels-photo-2832063.jpeg"
+    ],
+    "bestTime": "October to February",
+    "weather": "Cool and breezy winters",
+    "coordinates": "19.6900° N, 72.7400° E",
+    "about": "Shirgaon Beach is a peaceful retreat with a beautiful shoreline, ideal for a day of relaxation.",
+    "attractions": ["Beach Walks", "Photography", "Sunsets", "Picnics"],
+    "category": "Tourist Attraction"
+  },
+  {
+    "id": 18,
+    "name": "Kalmandavi Waterfall",
+    "location": "Near Palghar, Maharashtra",
+    "description": "Majestic waterfall surrounded by dense forests",
+    "image": "https://images.pexels.com/photos/2832055/pexels-photo-2832055.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832055/pexels-photo-2832055.jpeg",
+      "https://images.pexels.com/photos/2832056/pexels-photo-2832056.jpeg",
+      "https://images.pexels.com/photos/2832057/pexels-photo-2832057.jpeg"
+    ],
+    "bestTime": "June to September",
+    "weather": "Monsoon with heavy rainfall",
+    "coordinates": "19.5800° N, 72.7200° E",
+    "about": "Kalmandavi Waterfall is a stunning waterfall, particularly captivating during the monsoon season, surrounded by lush forests.",
+    "attractions": ["Waterfall", "Trekking Trails", "Photography", "Nature Walks"],
+    "category": "Tourist Attraction"
+  },
+  {
+    "id": 19,
+    "name": "Kelve Dam",
+    "location": "Kelve, Palghar",
+    "description": "A scenic dam surrounded by hills and lush greenery",
+    "image": "https://images.pexels.com/photos/2832064/pexels-photo-2832064.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832064/pexels-photo-2832064.jpeg",
+      "https://images.pexels.com/photos/2832065/pexels-photo-2832065.jpeg",
+      "https://images.pexels.com/photos/2832066/pexels-photo-2832066.jpeg"
+    ],
+    "bestTime": "October to March",
+    "weather": "Cool and pleasant",
+    "coordinates": "19.7000° N, 72.7300° E",
+    "about": "Kelve Dam is a serene spot for nature lovers, offering a scenic view of the surrounding hills.",
+    "attractions": ["Scenic Views", "Photography", "Nature Walks", "Fishing"],
+    "category": "Tourist Attraction"
+  },
+  {
+    "id": 20,
+    "name": "Kamare Dam",
+    "location": "Kamare, Palghar",
+    "description": "A peaceful dam with a picturesque landscape",
+    "image": "https://images.pexels.com/photos/2832067/pexels-photo-2832067.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832067/pexels-photo-2832067.jpeg",
+      "https://images.pexels.com/photos/2832068/pexels-photo-2832068.jpeg",
+      "https://images.pexels.com/photos/2832069/pexels-photo-2832069.jpeg"
+    ],
+    "bestTime": "October to February",
+    "weather": "Mild winters with cool winds",
+    "coordinates": "19.7100° N, 72.7400° E",
+    "about": "Kamare Dam offers a peaceful atmosphere with surrounding greenery, making it an ideal spot for a relaxing retreat.",
+    "attractions": ["Scenic Views", "Photography", "Bird Watching", "Nature Walks"],
+    "category": "Tourist Attraction"
+  },
+  {
+    "id": 21,
+    "name": "Goverdhan Eco Village",
+    "location": "Palghar, Maharashtra",
+    "description": "Eco-friendly village offering organic farming experience",
+    "image": "https://images.pexels.com/photos/2832070/pexels-photo-2832070.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832070/pexels-photo-2832070.jpeg",
+      "https://images.pexels.com/photos/2832071/pexels-photo-2832071.jpeg",
+      "https://images.pexels.com/photos/2832072/pexels-photo-2832072.jpeg"
+    ],
+    "bestTime": "Year-round",
+    "weather": "Pleasant and cool",
+    "coordinates": "19.6000° N, 72.7100° E",
+    "about": "Goverdhan Eco Village offers visitors a chance to experience sustainable living through organic farming and environmental conservation.",
+    "attractions": ["Organic Farming", "Yoga Retreat", "Sustainable Living", "Nature Walks"],
+    "category": "Tourist Attraction"
+  },
+  {
+    "id": 22,
+    "name": "Dhabosa Waterfall",
+    "location": "Palghar District",
+    "description": "Magnificent waterfall with natural pool",
+    "image": "https://images.pexels.com/photos/2832043/pexels-photo-2832043.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832043/pexels-photo-2832043.jpeg",
+      "https://images.pexels.com/photos/2832044/pexels-photo-2832044.jpeg",
+      "https://images.pexels.com/photos/2832045/pexels-photo-2832045.jpeg"
+    ],
+    "bestTime": "July to October",
+    "weather": "Monsoon and post-monsoon season",
+    "coordinates": "19.8000° N, 72.8000° E",
+    "about": "Dabhosa Waterfall is one of the most popular waterfalls in Palghar, known for its natural swimming pool and scenic beauty.",
+    "attractions": ["Natural Pool", "Hiking Trails", "Bird Watching", "Cave Exploration"],
+    "category": "Tourist Attraction"
+  },
+  {
+    "id": 23,
+    "name": "Kaldurg Trek",
+    "location": "Kaldurg, Palghar",
+    "description": "A thrilling trek to an ancient hill fort",
+    "image": "https://images.pexels.com/photos/2832073/pexels-photo-2832073.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/2832073/pexels-photo-2832073.jpeg",
+      "https://images.pexels.com/photos/2832074/pexels-photo-2832074.jpeg",
+      "https://images.pexels.com/photos/2832075/pexels-photo-2832075.jpeg"
+    ],
+    "bestTime": "November to February",
+    "weather": "Cool and pleasant",
+    "coordinates": "19.7500° N, 72.7400° E",
+    "about": "Kaldurg Trek is an adventurous trek that leads to an ancient fort offering panoramic views of the surrounding landscape.",
+    "attractions": ["Fort Ruins", "Trekking Trails", "Scenic Views", "Photography"],
+    "category": "Tourist Attraction",
+  },
 ];
 
 // Create a context type
 type TourismContextType = {
   tourismSpots: TourismSpot[];
   getTourismSpotById: (id: number) => TourismSpot | undefined;
+  getFortSpots: () => TourismSpot[];
+  getWaterfallSpots: () => TourismSpot[];
+  getTouristAttractions: () => TourismSpot[];
 };
 
 // Create the context
@@ -166,8 +455,26 @@ export function TourismProvider({ children }: { children: ReactNode }) {
     return tourismSpots.find(spot => spot.id === id);
   };
 
+  const getFortSpots = () => {
+    return tourismSpots.filter(spot => spot.category === 'Fort');
+  };
+
+  const getWaterfallSpots = () => {
+    return tourismSpots.filter(spot => spot.category === 'Waterfall');
+  };
+
+  const getTouristAttractions = () => {
+    return tourismSpots.filter(spot => spot.category === 'Tourist Attraction');
+  };
+
   return (
-    <TourismContext.Provider value={{ tourismSpots, getTourismSpotById }}>
+    <TourismContext.Provider value={{ 
+      tourismSpots, 
+      getTourismSpotById,
+      getFortSpots,
+      getWaterfallSpots,
+      getTouristAttractions
+    }}>
       {children}
     </TourismContext.Provider>
   );
