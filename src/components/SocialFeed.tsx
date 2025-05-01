@@ -1,71 +1,30 @@
-import { Heart, MessageCircle, Bookmark, Send, MoreHorizontal, Settings, Grid, Video, PenSquare as PersonSquare } from 'lucide-react';
+import { Settings, Grid, Video, PenSquare as PersonSquare } from 'lucide-react';
+import { useState } from 'react';
 
 const posts = [
-  {
-    id: 1,
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d',
-    likes: '156K',
-    comments: '2,453'
-  },
-  {
-    id: 2,
-    image: 'https://images.unsplash.com/photo-1582610116397-edb318620f90',
-    likes: '143K',
-    comments: '1,264'
-  },
-  {
-    id: 3,
-    image: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6',
-    likes: '189K',
-    comments: '3,112'
-  },
-  {
-    id: 4,
-    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb',
-    likes: '201K',
-    comments: '4,521'
-  },
-  {
-    id: 5,
-    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227',
-    likes: '167K',
-    comments: '2,845'
-  },
-  {
-    id: 6,
-    image: 'https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4',
-    likes: '178K',
-    comments: '3,256'
-  },
-  {
-    id: 7,
-    image: 'https://images.unsplash.com/photo-1540541338287-41700207dee6',
-    likes: '134K',
-    comments: '1,987'
-  },
-  {
-    id: 8,
-    image: 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd',
-    likes: '145K',
-    comments: '2,154'
-  },
-  {
-    id: 9,
-    image: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18',
-    likes: '198K',
-    comments: '3,654'
-  }
+  { id: 1, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
+  { id: 2, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
+  { id: 3, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
+  { id: 4, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
+  { id: 5, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
+  { id: 6, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
+  { id: 7, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
+  { id: 8, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
+  { id: 9, videoUrl: 'https://res.cloudinary.com/db1nsxnit/video/upload/v1743609565/Video-969_gkx7z0.mp4' },
 ];
 
 export default function SocialFeed() {
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   return (
     <section className="bg-white py-16">
       <div className="max-w-[935px] mx-auto px-4">
+
         {/* Profile Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
-          <div className="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-200">
-            <img loading="lazy"
-              src="https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg?w=150&h=150&fit=crop"
+          <div className="w-[150px] h-[150px] rounded-full overflow-hidden border-2 border-gray-200">
+            <img
+              src="https://res.cloudinary.com/db1nsxnit/image/upload/v1742932820/468575283_1517059178997254_5439620630015446336_n_cdn44q.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -75,15 +34,15 @@ export default function SocialFeed() {
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4 flex-wrap">
                 <h2 className="text-xl font-semibold">palgharcity48</h2>
-                 <a href="https://www.instagram.com/palgharcity48/">
-                <button className="px-4 py-1.5 bg-gray-100 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors">
-                  Follow
-                </button>
+                <a href="https://www.instagram.com/palgharcity48/">
+                  <button className="px-4 py-1.5 bg-gray-100 rounded-lg font-medium text-sm hover:bg-gray-200 transition">
+                    Follow
+                  </button>
                 </a>
-                 <a href="https://www.instagram.com/palgharcity48/">
-                <button className="px-4 py-1.5 bg-gray-100 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors">
-                  Message
-                </button>
+                <a href="https://www.instagram.com/palgharcity48/">
+                  <button className="px-4 py-1.5 bg-gray-100 rounded-lg font-medium text-sm hover:bg-gray-200 transition">
+                    Message
+                  </button>
                 </a>
                 <Settings className="w-5 h-5 text-gray-700 cursor-pointer" />
               </div>
@@ -105,9 +64,20 @@ export default function SocialFeed() {
 
               <div>
                 <h1 className="font-semibold">palgharcity48 Official</h1>
-                <p className="text-sm text-gray-700">Sachin Vishwkarma | 🇮🇳 Food | Travel | Explore</p>
-                <p className="text-sm text-gray-700">📍 Palghar | Mumbai | Prayagraj | 𝗗𝗿𝗼𝗻𝗲 𝗣𝗶𝗹𝗼𝘁 🇮🇳 <br></br>Admin of @palgharcity48 <br></br>Explore | Traveling | Foody🔸Blogger |</p>
-                <a href="https://www.instagram.com/palgharcity48/" className="text-sm text-blue-900 font-medium">palgharcity48.com</a>
+                <p className="text-sm text-gray-700">
+                  Sachin Vishwkarma | 🇮🇳 Food | Travel | Explore
+                </p>
+                <p className="text-sm text-gray-700">
+                  📍 Palghar | Mumbai | Prayagraj | 𝗗𝗿𝗼𝗻𝗲 𝗣𝗶𝗹𝗼𝘁 🇮🇳 <br />
+                  Admin of @palgharcity48 <br />
+                  Explore | Traveling | Foody🔸Blogger
+                </p>
+                <a
+                  href="https://www.instagram.com/palgharcity48/"
+                  className="text-sm text-blue-900 font-medium"
+                >
+                  palgharcity48.com
+                </a>
               </div>
             </div>
           </div>
@@ -131,79 +101,62 @@ export default function SocialFeed() {
           </div>
         </div>
 
-        {/* Photo Grid */}
-        <div className="grid grid-cols-3 gap-1 md:gap-7">
+        {/* Instagram Video Grid */}
+        <div className="grid grid-cols-3 gap-4 mb-8">
           {posts.map((post) => (
-            <div key={post.id} className="relative aspect-square group cursor-pointer">
-              <img loading="lazy"
-                src={`${post.image}?w=600&h=600&fit=crop`}
-                alt={`Post ${post.id}`}
+            <div
+              key={post.id}
+              className="aspect-[9/16] overflow-hidden rounded-xl shadow-md cursor-pointer"
+              onClick={() => setActiveVideo(post.videoUrl)}
+            >
+              <video
+                src={post.videoUrl}
                 className="w-full h-full object-cover"
+                muted
+                playsInline
               />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-center justify-center gap-8">
-                <div className="flex items-center gap-2 text-white">
-                  <Heart className="w-6 h-6 fill-white stroke-none" />
-                  <span className="font-semibold">{post.likes}</span>
-                </div>
-                <div className="flex items-center gap-2 text-white">
-                  <MessageCircle className="w-6 h-6 fill-white stroke-none" />
-                  <span className="font-semibold">{post.comments}</span>
-                </div>
-              </div>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* YouTube Videos */}
-      <div className="mt-16 mx-2 overflow-hidden ">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
-          Latest YouTube Videos
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 max-w-full mx-auto">
-          {/* Video 1 */}
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz" 
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-xl"
-            ></iframe>
+        {/* Fullscreen Video Modal */}
+        {activeVideo && (
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+            <button
+              onClick={() => setActiveVideo(null)}
+              className="absolute top-4 right-4 text-white text-4xl font-bold"
+            >
+              ×
+            </button>
+            <video
+              src={activeVideo}
+              controls
+              autoPlay
+              className="max-w-[90%] max-h-[90%] rounded-xl shadow-xl"
+            />
           </div>
-          {/* Video 2 */}
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz" 
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-xl"
-            ></iframe>
-          </div>
-          {/* Video 3 */}
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz" 
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-xl"
-            ></iframe>
-          </div>
-          {/* Video 4 */}
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz" 
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-xl"
-            ></iframe>
+        )}
+
+        {/* YouTube Section */}
+        <div className="mt-16 overflow-hidden">
+          <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">
+            Latest YouTube Videos
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="aspect-w-16 aspect-h-9">
+                <iframe
+                  src="https://www.youtube.com/embed/mJgR37clo-Y?si=76xydllV5fpX--gz"
+                  title={`YouTube video ${i}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-xl"
+                ></iframe>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-
     </section>
   );
 }
